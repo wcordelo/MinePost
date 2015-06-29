@@ -1,4 +1,4 @@
-
+package fbudreamteam.android.minepost;
 
 import android.app.Application;
 
