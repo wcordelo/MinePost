@@ -22,4 +22,12 @@ android {
 dependencies {
     compile fileTree(dir: 'libs', include: ['*.jar'])
     compile 'com.android.support:appcompat-v7:22.2.0'
+
+    //load dependency from jitpack
+    compile 'com.github.yongjhih:parse:1.9.2'
+    compile 'com.github.yongjhih:parse-crash-reporting:1.9.2'
+    compile 'com.github.yongjhih:parse-facebook-v3:1.9.2'
+    compile 'com.facebook.android:facebook-android-sdk:3.20.0'
+    compile 'com.parse.bolts:bolts-android:1.1.4'
+
 }
