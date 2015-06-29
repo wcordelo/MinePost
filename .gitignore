@@ -1,0 +1,17 @@
+local.properties
+.gradle/2.2.1/taskArtifacts/cache.properties
+.gradle/2.2.1/taskArtifacts/cache.properties.lock
+.gradle/2.2.1/taskArtifacts/fileHashes.bin
+.gradle/2.2.1/taskArtifacts/fileSnapshots.bin
+.gradle/2.2.1/taskArtifacts/outputFileStates.bin
+.gradle/2.2.1/taskArtifacts/taskArtifacts.bin
+.idea/workspace.xml
+.idea/libraries/appcompat_v7_22_2_0.xml
+.idea/libraries/bolts_android_1_1_4.xml
+.idea/libraries/facebook_android_sdk_3_20_0.xml
+.idea/libraries/parse_1_9_2.xml
+.idea/libraries/parse_crash_reporting_1_9_2.xml
+.idea/libraries/parse_facebook_v3_1_9_2.xml
+.idea/libraries/support_annotations_22_2_0.xml
+.idea/libraries/support_v4_22_2_0.xml
+build/intermediates/gradle_project_sync_data.bin
