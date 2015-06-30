@@ -13,7 +13,14 @@ import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
 
+<<<<<<< HEAD:app/src/main/java/com/fbudreamteam/android/MinePost/QuizActivity.java
+import com.fbudreamteam.android.MinePost.model.ParseQuizQuestion;
 import com.fbudreamteam.android.MinePost.model.QuizLoadedCallback;
+import com.fbudreamteam.android.MinePost.model.QuizQuestionManager;
+import com.fbudreamteam.android.geoquiz.R;
+=======
+import com.fbudreamteam.android.MinePost.model.QuizLoadedCallback;
+>>>>>>> fe739e69266b214e257c3d7f2ca58e36a0b48899:app/src/main/java/com/fbudreamteam/android/MinePost/QuizActivity.java
 
 import java.util.List;
 
@@ -34,8 +41,13 @@ public class QuizActivity extends AppCompatActivity implements QuizLoadedCallbac
     private int mCurrentIndex = 0;
 
     private boolean mIsCheater;
+<<<<<<< HEAD:app/src/main/java/com/fbudreamteam/android/MinePost/QuizActivity.java
+    private QuizQuestionManager mQuizQuestionManager;
+    List<ParseQuizQuestion> mParseQuizQuestionBank;
+=======
     private com.fbudreamteam.android.MinePost.model.QuizQuestionManager mQuizQuestionManager;
     List<com.fbudreamteam.android.MinePost.model.ParseQuizQuestion> mParseQuizQuestionBank;
+>>>>>>> fe739e69266b214e257c3d7f2ca58e36a0b48899:app/src/main/java/com/fbudreamteam/android/MinePost/QuizActivity.java
     private ProgressDialog mProgressDialog;
 
     private void updateQuestion() {
@@ -61,7 +73,11 @@ public class QuizActivity extends AppCompatActivity implements QuizLoadedCallbac
 
 
     @Override
+<<<<<<< HEAD:app/src/main/java/com/fbudreamteam/android/MinePost/QuizActivity.java
+    public void onQuestionsLoaded(List<ParseQuizQuestion> questions) {
+=======
     public void onQuestionsLoaded(List<com.fbudreamteam.android.MinePost.model.ParseQuizQuestion> questions) {
+>>>>>>> fe739e69266b214e257c3d7f2ca58e36a0b48899:app/src/main/java/com/fbudreamteam/android/MinePost/QuizActivity.java
         mProgressDialog.hide();
         mParseQuizQuestionBank = questions;
         if (mParseQuizQuestionBank.size() == 0) {
@@ -78,7 +94,11 @@ public class QuizActivity extends AppCompatActivity implements QuizLoadedCallbac
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+<<<<<<< HEAD:app/src/main/java/com/fbudreamteam/android/MinePost/QuizActivity.java
+        mQuizQuestionManager = new QuizQuestionManager();
+=======
         mQuizQuestionManager = new com.fbudreamteam.android.MinePost.model.QuizQuestionManager();
+>>>>>>> fe739e69266b214e257c3d7f2ca58e36a0b48899:app/src/main/java/com/fbudreamteam/android/MinePost/QuizActivity.java
         Log.d(TAG, "onCreate(Bundle) called");
         setContentView(R.layout.activity_quiz);
         mQuestionTextView = (TextView) findViewById(R.id.question_text_view);
@@ -120,7 +140,11 @@ public class QuizActivity extends AppCompatActivity implements QuizLoadedCallbac
             @Override
             public void onClick(View v) {
                 boolean answerIsTrue = mParseQuizQuestionBank.get(mCurrentIndex).isAnswerTrue();
+<<<<<<< HEAD:app/src/main/java/com/fbudreamteam/android/MinePost/QuizActivity.java
+                Intent i = CheatActivity.newIntent(QuizActivity.this, answerIsTrue);
+=======
                 Intent i = com.fbudreamteam.android.MinePost.CheatActivity.newIntent(com.fbudreamteam.android.MinePost.QuizActivity.this, answerIsTrue);
+>>>>>>> fe739e69266b214e257c3d7f2ca58e36a0b48899:app/src/main/java/com/fbudreamteam/android/MinePost/QuizActivity.java
                 startActivityForResult(i, REQUEST_CODE_CHEAT);
             }
         });

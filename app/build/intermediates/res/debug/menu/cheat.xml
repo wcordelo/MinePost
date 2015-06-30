@@ -4,4 +4,4 @@
     <item android:id="@+id/add_question"
           android:title="@string/question_string"/>
 </menu>
-<!-- From: file:/Users/wcordelo/Documents/FBU%20Dream%20Team/MinePost_SSH/app/src/main/res/menu/cheat.xml -->
+<!-- From: file:/Users/alexjmendelsohn/Documents/MinePost/app/src/main/res/menu/cheat.xml -->

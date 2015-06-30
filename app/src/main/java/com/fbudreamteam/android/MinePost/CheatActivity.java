@@ -14,6 +14,8 @@ import android.view.ViewAnimationUtils;
 import android.widget.Button;
 import android.widget.TextView;
 
+import com.fbudreamteam.android.geoquiz.R;
+
 
 public class CheatActivity extends AppCompatActivity {
 

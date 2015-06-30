@@ -27,5 +27,13 @@
     <string name="quiz_added">Quiz Added!</string>
     <string name="add_question_button">Add Question</string>
     <string name="title_add_question">Add Question</string>
+    <string name="post_details_label">Details</string>
+    <string name="crime_solved_label">Solved</string>
+    <string name="crime_suspect_label">Suspect:</string>
+    <string name="create_post_text">Post!</string>
+    <string name="crime_report_text">Send Crime Report</string>
+    <string name="post_message_hint">Enter a message to post.</string>
+    <string name="post_title_label">Title:</string>
+    <string name="post_title_hint">Enter the title of the message.</string>
 
 </resources>
