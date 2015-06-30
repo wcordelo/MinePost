@@ -2,6 +2,8 @@
 <manifest package="com.fbudreamteam.android.MinePost"
           xmlns:android="http://schemas.android.com/apk/res/android">
 
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+
     <application
         android:name="com.fbudreamteam.android.MinePost.GeoquizApplication"
         android:allowBackup="true"

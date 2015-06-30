@@ -20,9 +20,6 @@ android {
 }
 
 dependencies {
-
-
-
     compile 'com.android.support:appcompat-v7:22.1.0'
     //load dependency from jitpack
     compile 'com.github.yongjhih:parse:1.9.2'
@@ -30,4 +27,6 @@ dependencies {
     compile 'com.github.yongjhih:parse-facebook-v3:1.9.2'
     compile 'com.facebook.android:facebook-android-sdk:3.20.0'
     compile 'com.parse.bolts:bolts-android:1.1.4'
+    compile 'com.android.support:support-v4:22.2.0'
+    compile 'com.android.support:recyclerview-v7:22.2.0'
 }
