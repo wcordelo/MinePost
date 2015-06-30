@@ -9,32 +9,18 @@
         <dex dex="/Users/wcordelo/Documents/FBU Dream Team/geoquiz-parse/app/build/intermediates/pre-dexed/debug/ParseFacebookUtilsV3-1.9.2-a8d073a6a2805bc0cb8060f588bc231063f4c4d7.jar" />
     </item>
     <item
-        jar="/Users/wcordelo/Documents/FBU Dream Team/geoquiz-parse/app/build/intermediates/exploded-aar/com.github.yongjhih/parse-facebook-v3/1.9.2/classes.jar"
+        jar="/Users/wcordelo/Documents/FBU Dream Team/MinePost_SSH/app/build/intermediates/exploded-aar/com.github.yongjhih/parse-facebook-v3/1.9.2/libs/ParseFacebookUtilsV3-1.9.2.jar"
         jumboMode="false"
         revision="21.1.2"
-        sha1="b017858fd290b74a98737e3a24f4999ed03f60fc">
-        <dex dex="/Users/wcordelo/Documents/FBU Dream Team/geoquiz-parse/app/build/intermediates/pre-dexed/debug/classes-529feb88eba1ffa791a61ffe5d6455a3f9311a6f.jar" />
+        sha1="01898977512a5c947d9ec003a4596be207ebe684">
+        <dex dex="/Users/wcordelo/Documents/FBU Dream Team/MinePost_SSH/app/build/intermediates/pre-dexed/debug/ParseFacebookUtilsV3-1.9.2-fcced1881a3831378d7d916287856b870c8d401f.jar" />
     </item>
     <item
-        jar="/Users/wcordelo/Documents/FBU Dream Team/geoquiz-parse/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/22.1.0/classes.jar"
-        jumboMode="false"
-        revision="21.1.2"
-        sha1="983e2f375504bc04def18e709c35192afe92e65f">
-        <dex dex="/Users/wcordelo/Documents/FBU Dream Team/geoquiz-parse/app/build/intermediates/pre-dexed/debug/classes-473b9de9fe1e95dbeb04694be7fb6131e84bd2ca.jar" />
-    </item>
-    <item
-        jar="/Users/wcordelo/Documents/FBU Dream Team/geoquiz-parse/app/build/intermediates/exploded-aar/com.android.support/support-v4/22.1.0/classes.jar"
-        jumboMode="false"
-        revision="21.1.2"
-        sha1="eeebabdfd8203f6ab639ccea4ffa1f20e1adee3a">
-        <dex dex="/Users/wcordelo/Documents/FBU Dream Team/geoquiz-parse/app/build/intermediates/pre-dexed/debug/classes-35827936be648fd75159173da4bc919f3605f70a.jar" />
-    </item>
-    <item
-        jar="/Users/wcordelo/Documents/FBU Dream Team/geoquiz-parse/app/build/intermediates/exploded-aar/com.github.yongjhih/parse/1.9.2/classes.jar"
+        jar="/Users/wcordelo/Documents/FBU Dream Team/MinePost_SSH/app/build/intermediates/exploded-aar/com.github.yongjhih/parse/1.9.2/classes.jar"
         jumboMode="false"
         revision="21.1.2"
         sha1="1fa6e527e1fcee974664fd97fc060f709b209afe">
-        <dex dex="/Users/wcordelo/Documents/FBU Dream Team/geoquiz-parse/app/build/intermediates/pre-dexed/debug/classes-679ebed0e27027e9c38ebc872ed4118f7efb9b3d.jar" />
+        <dex dex="/Users/wcordelo/Documents/FBU Dream Team/MinePost_SSH/app/build/intermediates/pre-dexed/debug/classes-fc1f2ea26215c51e3b4075325b048e1b17dc502a.jar" />
     </item>
     <item
         jar="/Users/wcordelo/.gradle/caches/modules-2/files-2.1/com.parse.bolts/bolts-android/1.1.4/129874135e6081269ace2312092031558865de12/bolts-android-1.1.4.jar"
@@ -49,6 +35,97 @@
         revision="21.1.2"
         sha1="66745a122dab28a82f1c1169dd85aeddf4d661f9">
         <dex dex="/Users/wcordelo/Documents/FBU Dream Team/geoquiz-parse/app/build/intermediates/pre-dexed/debug/classes-b2991ff18b638052124e914e37edd717960e40bb.jar" />
+    </item>
+    <item
+        jar="/Users/wcordelo/Documents/FBU Dream Team/MinePost_SSH/app/build/intermediates/exploded-aar/com.github.yongjhih/parse-facebook-v3/1.9.2/classes.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="b017858fd290b74a98737e3a24f4999ed03f60fc">
+        <dex dex="/Users/wcordelo/Documents/FBU Dream Team/MinePost_SSH/app/build/intermediates/pre-dexed/debug/classes-ead27b36024abb90491032bb736519f7c5d35686.jar" />
+    </item>
+    <item
+        jar="/Users/wcordelo/Documents/FBU Dream Team/geoquiz-parse/app/build/intermediates/exploded-aar/com.facebook.android/facebook-android-sdk/3.20.0/classes.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="66236ebe4d86dafbfc30b4fd7e5917ba2a645b35">
+        <dex dex="/Users/wcordelo/Documents/FBU Dream Team/geoquiz-parse/app/build/intermediates/pre-dexed/debug/classes-00a89ec63b822fef99beb19bf3de292bfb35f767.jar" />
+    </item>
+    <item
+        jar="/Users/wcordelo/Documents/FBU Dream Team/geoquiz-parse/app/build/intermediates/exploded-aar/com.github.yongjhih/parse-facebook-v3/1.9.2/classes.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="b017858fd290b74a98737e3a24f4999ed03f60fc">
+        <dex dex="/Users/wcordelo/Documents/FBU Dream Team/geoquiz-parse/app/build/intermediates/pre-dexed/debug/classes-529feb88eba1ffa791a61ffe5d6455a3f9311a6f.jar" />
+    </item>
+    <item
+        jar="/Users/wcordelo/Documents/FBU Dream Team/geoquiz-parse/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/22.1.0/classes.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="983e2f375504bc04def18e709c35192afe92e65f">
+        <dex dex="/Users/wcordelo/Documents/FBU Dream Team/geoquiz-parse/app/build/intermediates/pre-dexed/debug/classes-473b9de9fe1e95dbeb04694be7fb6131e84bd2ca.jar" />
+    </item>
+    <item
+        jar="/Users/wcordelo/Documents/FBU Dream Team/MinePost_SSH/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/22.1.0/classes.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="983e2f375504bc04def18e709c35192afe92e65f">
+        <dex dex="/Users/wcordelo/Documents/FBU Dream Team/MinePost_SSH/app/build/intermediates/pre-dexed/debug/classes-0b70d6ae8f88a11f95378bf53d07ca3feb480a6f.jar" />
+    </item>
+    <item
+        jar="/Users/wcordelo/Documents/FBU Dream Team/geoquiz-parse/app/build/intermediates/exploded-aar/com.android.support/support-v4/22.1.0/classes.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="eeebabdfd8203f6ab639ccea4ffa1f20e1adee3a">
+        <dex dex="/Users/wcordelo/Documents/FBU Dream Team/geoquiz-parse/app/build/intermediates/pre-dexed/debug/classes-35827936be648fd75159173da4bc919f3605f70a.jar" />
+    </item>
+    <item
+        jar="/Users/wcordelo/Documents/FBU Dream Team/MinePost_SSH/app/build/intermediates/exploded-aar/com.android.support/support-v4/22.1.0/libs/internal_impl-22.1.0.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="025cb89f2896c63200ff4c2e6c467a95691d880a">
+        <dex dex="/Users/wcordelo/Documents/FBU Dream Team/MinePost_SSH/app/build/intermediates/pre-dexed/debug/internal_impl-22.1.0-8d0af78e05b605c8c9490d1bfe9d7a8eaf300370.jar" />
+    </item>
+    <item
+        jar="/Users/wcordelo/Documents/FBU Dream Team/MinePost_SSH/app/build/intermediates/exploded-aar/com.android.support/support-v4/22.1.0/classes.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="eeebabdfd8203f6ab639ccea4ffa1f20e1adee3a">
+        <dex dex="/Users/wcordelo/Documents/FBU Dream Team/MinePost_SSH/app/build/intermediates/pre-dexed/debug/classes-c172739904a90c8d9d5f9875b9868e23d4521e84.jar" />
+    </item>
+    <item
+        jar="/Users/wcordelo/Documents/FBU Dream Team/geoquiz-parse/app/build/intermediates/exploded-aar/com.github.yongjhih/parse/1.9.2/classes.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="1fa6e527e1fcee974664fd97fc060f709b209afe">
+        <dex dex="/Users/wcordelo/Documents/FBU Dream Team/geoquiz-parse/app/build/intermediates/pre-dexed/debug/classes-679ebed0e27027e9c38ebc872ed4118f7efb9b3d.jar" />
+    </item>
+    <item
+        jar="/Users/wcordelo/Documents/FBU Dream Team/MinePost_SSH/app/build/intermediates/exploded-aar/com.github.yongjhih/parse-crash-reporting/1.9.2/classes.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="66745a122dab28a82f1c1169dd85aeddf4d661f9">
+        <dex dex="/Users/wcordelo/Documents/FBU Dream Team/MinePost_SSH/app/build/intermediates/pre-dexed/debug/classes-59f6128f5c710ee7275c28e3f5ac5619fcf15ecd.jar" />
+    </item>
+    <item
+        jar="/Users/wcordelo/Documents/FBU Dream Team/MinePost_SSH/app/build/intermediates/exploded-aar/com.facebook.android/facebook-android-sdk/3.20.0/classes.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="66236ebe4d86dafbfc30b4fd7e5917ba2a645b35">
+        <dex dex="/Users/wcordelo/Documents/FBU Dream Team/MinePost_SSH/app/build/intermediates/pre-dexed/debug/classes-619251edf66a8582f64350323f40a224d74a3881.jar" />
+    </item>
+    <item
+        jar="/Users/wcordelo/Documents/FBU Dream Team/MinePost_SSH/app/build/intermediates/exploded-aar/com.github.yongjhih/parse/1.9.2/libs/Parse-1.9.2.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="fe739334780fe321141e62720822c2d456061899">
+        <dex dex="/Users/wcordelo/Documents/FBU Dream Team/MinePost_SSH/app/build/intermediates/pre-dexed/debug/Parse-1.9.2-eb1c6b750b21c4b75ef8833363123bf6673265ba.jar" />
+    </item>
+    <item
+        jar="/Users/wcordelo/Documents/FBU Dream Team/MinePost_SSH/app/build/intermediates/exploded-aar/com.github.yongjhih/parse-crash-reporting/1.9.2/libs/ParseCrashReporting-1.9.2.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="83f3b1e397f1cc3f05cb9db078d9e364b5f5e218">
+        <dex dex="/Users/wcordelo/Documents/FBU Dream Team/MinePost_SSH/app/build/intermediates/pre-dexed/debug/ParseCrashReporting-1.9.2-7091699d14a8903fda9b0bead0c1dc9c6edbfa23.jar" />
     </item>
     <item
         jar="/Users/wcordelo/Library/Android/sdk/extras/android/m2repository/com/android/support/support-annotations/22.1.0/support-annotations-22.1.0.jar"
@@ -77,13 +154,6 @@
         revision="21.1.2"
         sha1="fe739334780fe321141e62720822c2d456061899">
         <dex dex="/Users/wcordelo/Documents/FBU Dream Team/geoquiz-parse/app/build/intermediates/pre-dexed/debug/Parse-1.9.2-92b0e469bfb0874a8068ad23aeb0447b0a0fa412.jar" />
-    </item>
-    <item
-        jar="/Users/wcordelo/Documents/FBU Dream Team/geoquiz-parse/app/build/intermediates/exploded-aar/com.facebook.android/facebook-android-sdk/3.20.0/classes.jar"
-        jumboMode="false"
-        revision="21.1.2"
-        sha1="66236ebe4d86dafbfc30b4fd7e5917ba2a645b35">
-        <dex dex="/Users/wcordelo/Documents/FBU Dream Team/geoquiz-parse/app/build/intermediates/pre-dexed/debug/classes-00a89ec63b822fef99beb19bf3de292bfb35f767.jar" />
     </item>
 
 </items>

@@ -25,4 +25,4 @@
     <item android:state_focused="true"                                                             android:drawable="@drawable/com_facebook_picker_list_focused" />
 
 </selector>
-<!-- From: file:/Users/karthiks/Code/android-sdk/facebook/res/drawable/com_facebook_picker_list_selector.xml --><!-- From: file:/Users/wcordelo/Documents/FBU%20Dream%20Team/geoquiz-parse/app/build/intermediates/exploded-aar/com.facebook.android/facebook-android-sdk/3.20.0/res/drawable/com_facebook_picker_list_selector.xml -->
+<!-- From: file:/Users/karthiks/Code/android-sdk/facebook/res/drawable/com_facebook_picker_list_selector.xml --><!-- From: file:/Users/wcordelo/Documents/FBU%20Dream%20Team/MinePost_SSH/app/build/intermediates/exploded-aar/com.facebook.android/facebook-android-sdk/3.20.0/res/drawable/com_facebook_picker_list_selector.xml -->
