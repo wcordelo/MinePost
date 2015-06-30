@@ -1,4 +1,4 @@
-package com.fbudreamteam.android.geoquiz;
+package com.fbudreamteam.android.MinePost;
 
 import android.animation.Animator;
 import android.animation.AnimatorListenerAdapter;
@@ -13,6 +13,8 @@ import android.view.View;
 import android.view.ViewAnimationUtils;
 import android.widget.Button;
 import android.widget.TextView;
+
+import com.fbudreamteam.android.geoquiz.R;
 
 
 public class CheatActivity extends AppCompatActivity {

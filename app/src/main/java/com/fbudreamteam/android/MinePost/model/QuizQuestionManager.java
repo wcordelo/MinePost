@@ -1,4 +1,4 @@
-package com.fbudreamteam.android.geoquiz.model;
+package com.fbudreamteam.android.MinePost.model;
 
 import com.parse.FindCallback;
 import com.parse.ParseException;

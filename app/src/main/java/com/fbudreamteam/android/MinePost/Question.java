@@ -1,4 +1,4 @@
-package com.fbudreamteam.android.geoquiz;
+package com.fbudreamteam.android.MinePost;
 
 public class Question {
 

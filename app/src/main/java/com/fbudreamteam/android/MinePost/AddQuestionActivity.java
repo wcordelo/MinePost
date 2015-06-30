@@ -1,4 +1,4 @@
-package com.fbudreamteam.android.geoquiz;
+package com.fbudreamteam.android.MinePost;
 
 import android.app.ProgressDialog;
 import android.os.Bundle;
@@ -10,15 +10,15 @@ import android.widget.EditText;
 import android.widget.Toast;
 
 import com.fbudreamteam.android.geoquiz.R;
-import com.fbudreamteam.android.geoquiz.model.QuizAddedCallback;
-import com.fbudreamteam.android.geoquiz.model.QuizQuestionManager;
+import com.fbudreamteam.android.MinePost.model.QuizAddedCallback;
+import com.fbudreamteam.android.MinePost.model.QuizQuestionManager;
 
-public class AddQuestionActivity extends AppCompatActivity implements com.fbudreamteam.android.geoquiz.model.QuizAddedCallback {
+public class AddQuestionActivity extends AppCompatActivity implements QuizAddedCallback {
 
     private CheckBox mQuestionTrueCheckbox;
     private EditText mQuestionText;
     private Button mSaveQuestionButton;
-    private com.fbudreamteam.android.geoquiz.model.QuizQuestionManager mQuizQuestionManager;
+    private QuizQuestionManager mQuizQuestionManager;
     private ProgressDialog mProgressDialog;
 
     @Override
@@ -28,7 +28,7 @@ public class AddQuestionActivity extends AppCompatActivity implements com.fbudre
         mQuestionTrueCheckbox = (CheckBox) findViewById(R.id.question_true);
         mQuestionText = (EditText) findViewById(R.id.question_text);
         mSaveQuestionButton = (Button) findViewById(R.id.save_question);
-        mQuizQuestionManager = new com.fbudreamteam.android.geoquiz.model.QuizQuestionManager();
+        mQuizQuestionManager = new QuizQuestionManager();
         mSaveQuestionButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

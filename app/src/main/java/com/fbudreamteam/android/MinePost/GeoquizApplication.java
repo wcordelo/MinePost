@@ -1,8 +1,8 @@
-package com.fbudreamteam.android.geoquiz;
+package com.fbudreamteam.android.MinePost;
 
 import android.app.Application;
 
-import com.fbudreamteam.android.geoquiz.model.QuizQuestionManager;
+import com.fbudreamteam.android.MinePost.model.QuizQuestionManager;
 import com.parse.Parse;
 import com.parse.ParseCrashReporting;
 import com.parse.ParseUser;

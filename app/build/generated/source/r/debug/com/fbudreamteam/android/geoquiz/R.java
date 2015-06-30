@@ -1806,9 +1806,9 @@ containing a value of this type.
         public static final int action_mode_bar=0x7f090048;
         public static final int action_mode_bar_stub=0x7f090047;
         public static final int action_mode_close_button=0x7f090030;
-        public static final int action_settings=0x7f090080;
+        public static final int action_settings=0x7f090086;
         public static final int activity_chooser_view_content=0x7f090031;
-        public static final int add_question=0x7f09007f;
+        public static final int add_question=0x7f090085;
         public static final int add_question_button=0x7f090064;
         public static final int alertTitle=0x7f09003b;
         public static final int always=0x7f090016;
@@ -1848,6 +1848,9 @@ containing a value of this type.
         public static final int com_facebook_usersettingsfragment_logo_image=0x7f09007c;
         public static final int com_facebook_usersettingsfragment_profile_name=0x7f09007d;
         public static final int contentPanel=0x7f09003c;
+        public static final int create_post_button=0x7f090080;
+        public static final int crime_camera=0x7f090084;
+        public static final int crime_title=0x7f090081;
         public static final int custom=0x7f090040;
         public static final int customPanel=0x7f09003f;
         public static final int decor_content_parent=0x7f090049;
@@ -1878,6 +1881,8 @@ containing a value of this type.
         public static final int normal=0x7f09000a;
         public static final int parentPanel=0x7f090038;
         public static final int picker_subtitle=0x7f090074;
+        public static final int post_crime_photo=0x7f090083;
+        public static final int post_details=0x7f09007f;
         public static final int progress_circular=0x7f090005;
         public static final int progress_horizontal=0x7f090006;
         public static final int question_text=0x7f09005a;
@@ -1920,6 +1925,7 @@ containing a value of this type.
         public static final int true_button=0x7f090060;
         public static final int up=0x7f090008;
         public static final int useLogo=0x7f090012;
+        public static final int view_crime_photo=0x7f090082;
         public static final int withText=0x7f09001a;
         public static final int wrap_content=0x7f09001d;
     }
@@ -1972,10 +1978,13 @@ containing a value of this type.
         public static final int com_facebook_search_bar_layout=0x7f040028;
         public static final int com_facebook_tooltip_bubble=0x7f040029;
         public static final int com_facebook_usersettingsfragment=0x7f04002a;
-        public static final int select_dialog_item_material=0x7f04002b;
-        public static final int select_dialog_multichoice_material=0x7f04002c;
-        public static final int select_dialog_singlechoice_material=0x7f04002d;
-        public static final int support_simple_spinner_dropdown_item=0x7f04002e;
+        public static final int fragment_create_post=0x7f04002b;
+        public static final int fragment_view_post=0x7f04002c;
+        public static final int select_dialog_item_material=0x7f04002d;
+        public static final int select_dialog_multichoice_material=0x7f04002e;
+        public static final int select_dialog_singlechoice_material=0x7f04002f;
+        public static final int support_simple_spinner_dropdown_item=0x7f040030;
+        public static final int view_camera_and_title=0x7f040031;
     }
     public static final class menu {
         public static final int cheat=0x7f0d0000;
@@ -2036,25 +2045,33 @@ containing a value of this type.
         public static final int com_facebook_usersettingsfragment_logged_in=0x7f0b0030;
         public static final int com_facebook_usersettingsfragment_not_logged_in=0x7f0b0031;
         public static final int correct_toast=0x7f0b0032;
-        public static final int false_button=0x7f0b0033;
-        public static final int incorrect_toast=0x7f0b0034;
-        public static final int judgment_toast=0x7f0b0035;
-        public static final int next_button=0x7f0b0036;
-        public static final int question_africa=0x7f0b0037;
-        public static final int question_americas=0x7f0b0038;
-        public static final int question_asia=0x7f0b0039;
-        public static final int question_mideast=0x7f0b003a;
-        public static final int question_oceans=0x7f0b003b;
-        public static final int question_string=0x7f0b003c;
-        public static final int question_text=0x7f0b003d;
-        public static final int questions_loading_text=0x7f0b003e;
-        public static final int questions_saving_text=0x7f0b003f;
-        public static final int quiz_added=0x7f0b0040;
-        public static final int show_answer_button=0x7f0b0041;
-        public static final int title_activity_cheat=0x7f0b0042;
-        public static final int title_add_question=0x7f0b0043;
-        public static final int true_button=0x7f0b0044;
-        public static final int warning_text=0x7f0b0045;
+        public static final int create_post_text=0x7f0b0033;
+        public static final int crime_report_text=0x7f0b0034;
+        public static final int crime_solved_label=0x7f0b0035;
+        public static final int crime_suspect_label=0x7f0b0036;
+        public static final int false_button=0x7f0b0037;
+        public static final int incorrect_toast=0x7f0b0038;
+        public static final int judgment_toast=0x7f0b0039;
+        public static final int next_button=0x7f0b003a;
+        public static final int post_details_label=0x7f0b003b;
+        public static final int post_message_hint=0x7f0b003c;
+        public static final int post_title_hint=0x7f0b003d;
+        public static final int post_title_label=0x7f0b003e;
+        public static final int question_africa=0x7f0b003f;
+        public static final int question_americas=0x7f0b0040;
+        public static final int question_asia=0x7f0b0041;
+        public static final int question_mideast=0x7f0b0042;
+        public static final int question_oceans=0x7f0b0043;
+        public static final int question_string=0x7f0b0044;
+        public static final int question_text=0x7f0b0045;
+        public static final int questions_loading_text=0x7f0b0046;
+        public static final int questions_saving_text=0x7f0b0047;
+        public static final int quiz_added=0x7f0b0048;
+        public static final int show_answer_button=0x7f0b0049;
+        public static final int title_activity_cheat=0x7f0b004a;
+        public static final int title_add_question=0x7f0b004b;
+        public static final int true_button=0x7f0b004c;
+        public static final int warning_text=0x7f0b004d;
     }
     public static final class style {
         public static final int AlertDialog_AppCompat=0x7f0c0000;

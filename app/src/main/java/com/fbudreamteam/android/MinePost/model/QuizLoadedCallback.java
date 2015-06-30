@@ -1,4 +1,4 @@
-package com.fbudreamteam.android.geoquiz.model;
+package com.fbudreamteam.android.MinePost.model;
 
 import java.util.List;
 

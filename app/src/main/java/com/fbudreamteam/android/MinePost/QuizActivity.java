@@ -1,4 +1,4 @@
-package com.fbudreamteam.android.geoquiz;
+package com.fbudreamteam.android.MinePost;
 
 import android.app.Activity;
 import android.app.ProgressDialog;
@@ -13,7 +13,10 @@ import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.fbudreamteam.android.geoquiz.model.QuizLoadedCallback;
+import com.fbudreamteam.android.MinePost.model.ParseQuizQuestion;
+import com.fbudreamteam.android.MinePost.model.QuizLoadedCallback;
+import com.fbudreamteam.android.MinePost.model.QuizQuestionManager;
+import com.fbudreamteam.android.geoquiz.R;
 
 import java.util.List;
 
@@ -34,8 +37,8 @@ public class QuizActivity extends AppCompatActivity implements QuizLoadedCallbac
     private int mCurrentIndex = 0;
 
     private boolean mIsCheater;
-    private com.fbudreamteam.android.geoquiz.model.QuizQuestionManager mQuizQuestionManager;
-    List<com.fbudreamteam.android.geoquiz.model.ParseQuizQuestion> mParseQuizQuestionBank;
+    private QuizQuestionManager mQuizQuestionManager;
+    List<ParseQuizQuestion> mParseQuizQuestionBank;
     private ProgressDialog mProgressDialog;
 
     private void updateQuestion() {
@@ -61,7 +64,7 @@ public class QuizActivity extends AppCompatActivity implements QuizLoadedCallbac
 
 
     @Override
-    public void onQuestionsLoaded(List<com.fbudreamteam.android.geoquiz.model.ParseQuizQuestion> questions) {
+    public void onQuestionsLoaded(List<ParseQuizQuestion> questions) {
         mProgressDialog.hide();
         mParseQuizQuestionBank = questions;
         if (mParseQuizQuestionBank.size() == 0) {
@@ -78,7 +81,7 @@ public class QuizActivity extends AppCompatActivity implements QuizLoadedCallbac
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        mQuizQuestionManager = new com.fbudreamteam.android.geoquiz.model.QuizQuestionManager();
+        mQuizQuestionManager = new QuizQuestionManager();
         Log.d(TAG, "onCreate(Bundle) called");
         setContentView(R.layout.activity_quiz);
         mQuestionTextView = (TextView) findViewById(R.id.question_text_view);
@@ -120,7 +123,7 @@ public class QuizActivity extends AppCompatActivity implements QuizLoadedCallbac
             @Override
             public void onClick(View v) {
                 boolean answerIsTrue = mParseQuizQuestionBank.get(mCurrentIndex).isAnswerTrue();
-                Intent i = com.fbudreamteam.android.geoquiz.CheatActivity.newIntent(com.fbudreamteam.android.geoquiz.QuizActivity.this, answerIsTrue);
+                Intent i = CheatActivity.newIntent(QuizActivity.this, answerIsTrue);
                 startActivityForResult(i, REQUEST_CODE_CHEAT);
             }
         });
