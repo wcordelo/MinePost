@@ -33,4 +33,6 @@
     <string name="post_title_label">Title:</string>
     <string name="post_title_hint">Enter the title of the message.</string>
 
+    <string name="post">Post</string>
+
 </resources>
