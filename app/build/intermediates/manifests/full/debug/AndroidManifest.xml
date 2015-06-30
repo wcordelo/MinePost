@@ -12,13 +12,13 @@
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
 
     <application
-        android:name="com.fbudreamteam.android.geoquiz.GeoquizApplication"
+        android:name="com.fbudreamteam.android.MinePost.GeoquizApplication"
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
         android:theme="@style/AppTheme" >
         <activity
-            android:name="com.fbudreamteam.android.geoquiz.QuizActivity"
+            android:name="com.fbudreamteam.android.MinePost.QuizActivity"
             android:label="@string/app_name" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -27,11 +27,11 @@
             </intent-filter>
         </activity>
         <activity
-            android:name="com.fbudreamteam.android.geoquiz.CheatActivity"
+            android:name="com.fbudreamteam.android.MinePost.CheatActivity"
             android:label="@string/title_activity_cheat" >
         </activity>
         <activity
-            android:name="com.fbudreamteam.android.geoquiz.AddQuestionActivity"
+            android:name="com.fbudreamteam.android.MinePost.AddQuestionActivity"
             android:label="@string/title_add_question" />
     </application>
 
