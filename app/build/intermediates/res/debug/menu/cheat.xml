@@ -1,7 +1,0 @@
-<menu xmlns:android="http://schemas.android.com/apk/res/android"
-      xmlns:tools="http://schemas.android.com/tools"
-      tools:context="com.bignerdranch.android.MinePost.CheatActivity">
-    <item android:id="@+id/add_question"
-          android:title="@string/question_string"/>
-</menu>
-<!-- From: file:/Users/wcordelo/Documents/FBU%20Dream%20Team/MinePost_SSH/app/src/main/res/menu/cheat.xml -->
