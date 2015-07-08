@@ -10,25 +10,28 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="@string/post_details_label"
-        style="?android:listSeparatorTextViewStyle"/>
+        style="?android:listSeparatorTextViewStyle"
+        android:layout_weight="1"/>
 
     <EditText
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginRight="16dp"
         android:id="@+id/post_details"
-        android:hint="@string/post_message_hint"/>
+        android:hint="@string/post_message_hint"
+        android:layout_weight="1"/>
 
 
     <Button
-        android:layout_width="wrap_content"
+        android:layout_width="254dp"
         android:layout_height="wrap_content"
         android:id="@+id/create_post_button"
         android:layout_marginLeft="16dp"
         android:layout_marginRight="16dp"
         android:layout_marginTop="32dp"
         android:layout_gravity="center_vertical|center_horizontal"
-        android:text="@string/create_post_text"/>
+        android:text="@string/create_post_text"
+        />
 
 
 </LinearLayout>
