@@ -25,14 +25,14 @@ public class MinePostListFragment extends Fragment {
     private RecyclerView mMinePostRecyclerView;
     private MinePostAdapter mAdapter;
     private boolean mSubtitleVisible;
-//    private Callbacks mCallbacks; // Code not needed as we do not have selection of post but it might be useful to have
+    private Callbacks mCallbacks; // Code not needed as we do not have selection of post but it might be useful to have
 
     /**
      * Required interface for hosting activities.
      */
-//    public interface Callbacks {
-//        void onMinePostSelected(Crime crime);
-//    }
+    public interface Callbacks {
+        void onMinePostSelected(MinePost minePost);
+    }
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -43,7 +43,7 @@ public class MinePostListFragment extends Fragment {
     @Override
     public void onAttach(Activity activity) {
         super.onAttach(activity);
-//        mCallbacks = (Callbacks) activity;
+        mCallbacks = (Callbacks) activity;
     }
 
     @Override
@@ -79,7 +79,7 @@ public class MinePostListFragment extends Fragment {
     @Override
     public void onDetach() {
         super.onDetach();
-//        mCallbacks = null;
+        mCallbacks = null;
     }
 
     @Override
@@ -87,12 +87,12 @@ public class MinePostListFragment extends Fragment {
         super.onCreateOptionsMenu(menu, inflater);
         inflater.inflate(R.menu.fragment_minepost_list, menu);
 
-        MenuItem subtitleItem = menu.findItem(R.id.menu_item_show_subtitle);
-        if (mSubtitleVisible) {
-            subtitleItem.setTitle(R.string.hide_subtitle);
-        } else {
-            subtitleItem.setTitle(R.string.show_subtitle);
-        }
+//        MenuItem subtitleItem = menu.findItem(R.id.menu_item_show_subtitle);
+//        if (mSubtitleVisible) {
+//            subtitleItem.setTitle(R.string.hide_subtitle);
+//        } else {
+//            subtitleItem.setTitle(R.string.show_subtitle);
+//        }
     }
 
     @Override
@@ -102,13 +102,13 @@ public class MinePostListFragment extends Fragment {
                 MinePost minePost = new MinePost();
                 MinePostLab.get(getActivity()).addMinePost(minePost);
                 updateUI();
-//                mCallbacks.onCrimeSelected(minePost);
+                mCallbacks.onMinePostSelected(minePost);
                 return true;
-            case R.id.menu_item_show_subtitle:
-                mSubtitleVisible = !mSubtitleVisible;
-                getActivity().invalidateOptionsMenu();
-                updateSubtitle();
-                return true;
+//            case R.id.menu_item_show_subtitle:
+//                mSubtitleVisible = !mSubtitleVisible;
+//                getActivity().invalidateOptionsMenu();
+//                updateSubtitle();
+//                return true;
             default:
                 return super.onOptionsItemSelected(item);
         }
@@ -142,7 +142,7 @@ public class MinePostListFragment extends Fragment {
     }
 
     private class MinePostHolder extends RecyclerView.ViewHolder
-//            implements View.OnClickListener
+            implements View.OnClickListener
     {
 
         private TextView mTitleTextView;
@@ -153,7 +153,7 @@ public class MinePostListFragment extends Fragment {
 
         public MinePostHolder(View itemView) {
             super(itemView);
-//            itemView.setOnClickListener(this);
+            itemView.setOnClickListener(this);
 
             mTitleTextView = (TextView) itemView.findViewById(R.id.list_item_minepost_title_text_view);
             mDateTextView = (TextView) itemView.findViewById(R.id.list_item_minepost_date_text_view);
@@ -166,11 +166,11 @@ public class MinePostListFragment extends Fragment {
             mDateTextView.setText(mMinePost.getDate().toString());
 //            mSolvedCheckBox.setChecked(mMinePost.isSolved());
         }
-//
-//        @Override
-//        public void onClick(View v) {
-//            mCallbacks.onCrimeSelected(mMinePost);
-//        }
+
+        @Override
+        public void onClick(View v) {
+            mCallbacks.onMinePostSelected(mMinePost);
+        }
     }
 
     private class MinePostAdapter extends RecyclerView.Adapter<MinePostHolder> {
