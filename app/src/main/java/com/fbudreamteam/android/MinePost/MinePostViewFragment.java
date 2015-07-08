@@ -4,33 +4,27 @@ import android.app.Activity;
 import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.graphics.Bitmap;
-import android.net.Uri;
 import android.os.Bundle;
 import android.provider.MediaStore;
 import android.support.v4.app.Fragment;
-import android.text.Editable;
-import android.text.TextWatcher;
-import android.text.format.DateFormat;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.Button;
-import android.widget.EditText;
-import android.widget.ImageButton;
 import android.widget.ImageView;
+import android.widget.TextView;
 
 import java.io.File;
 import java.util.UUID;
 
 /**
- * Created by FBU Dream Team / William on 7/7/15.
+ * Created by FBU Dream Team / William on 7/8/15.
  */
-public class MinePostFragment extends Fragment {
+public class MinePostViewFragment extends Fragment {
 
     private static final String ARG_MinePost_ID = "MinePost_id";
 //    private static final String DIALOG_DATE = "DialogDate";
 
-//        private static final int REQUEST_DATE = 0;
+    //        private static final int REQUEST_DATE = 0;
 //    private static final int REQUEST_CONTACT = 1;
     private static final int REQUEST_PHOTO = 2;
 
@@ -43,13 +37,14 @@ public class MinePostFragment extends Fragment {
 
 
     private File mPhotoFile; // Will use Parse ImageView later on... once Database is implemented
-    private EditText mTitleField; // EditText for the Title Field in the Create New Post
-//        private Button mDateButton; // Might not use date if Created At is implemented
+    private TextView mTitleField; // EditText for the Title Field in the Create New Post
+    //        private Button mDateButton; // Might not use date if Created At is implemented
 //    private CheckBox mSolvedCheckbox; // Not needed at all. Will implement up /down voting
-    private Button mReportButton; // Instead of a Report Button we need a Post Button in the location
-//    private Button mSuspectButton; // This uses the contacts list which is something we don't need...
-    private ImageButton mPhotoButton; // Yes, very useful.
+//    private Button mReportButton; // Instead of a Report Button we need a Post Button in the location
+    //    private Button mSuspectButton; // This uses the contacts list which is something we don't need...
+//    private ImageButton mPhotoButton; // Yes, very useful.
     private ImageView mPhotoView; // Yes, also useful.
+    private TextView mDescription;
     private Callbacks mCallbacks; // Required to keep the fragments independent
 
     /**
@@ -59,11 +54,11 @@ public class MinePostFragment extends Fragment {
         void onMinePostUpdated(MinePost minePost);
     }
 
-    public static MinePostFragment newInstance(UUID MinePostId) {
+    public static MinePostViewFragment newInstance(UUID MinePostId) {
         Bundle args = new Bundle();
         args.putSerializable(ARG_MinePost_ID, MinePostId);
 
-        MinePostFragment fragment = new MinePostFragment();
+        MinePostViewFragment fragment = new MinePostViewFragment();
         fragment.setArguments(args);
         return fragment;
     }
@@ -100,31 +95,33 @@ public class MinePostFragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        View v = inflater.inflate(R.layout.fragment_create_post, container, false);
-
-        mTitleField = (EditText) v.findViewById(R.id.MinePost_title);
+        View v = inflater.inflate(R.layout.fragment_view_post, container, false);
+//View Title Field
+        mTitleField = (TextView) v.findViewById(R.id.MinePost_title);
         mTitleField.setText(mMinePost.getTitle());
-        mTitleField.addTextChangedListener(new TextWatcher() {
-            @Override
-            public void beforeTextChanged(CharSequence s, int start, int count, int after) {
-
-            }
-
-            @Override
-            public void onTextChanged(CharSequence s, int start, int before, int count) {
-                if (getActivity() == null) {
-                    return;
-                }
-                mMinePost.setTitle(s.toString());
-                mMinePost.setDescription(s.toString());
-                updateMinePost();
-            }
-
-            @Override
-            public void afterTextChanged(Editable s) {
-
-            }
-        });
+        mDescription = (TextView) v.findViewById(R.id.description_text_view);
+        mDescription.setText(mMinePost.getDescription());
+//        mTitleField.addTextChangedListener(new TextWatcher() {
+//            @Override
+//            public void beforeTextChanged(CharSequence s, int start, int count, int after) {
+//
+//            }
+//
+//            @Override
+//            public void onTextChanged(CharSequence s, int start, int before, int count) {
+//                if (getActivity() == null) {
+//                    return;
+//                }
+//                mMinePost.setTitle(s.toString());
+//                mMinePost.setDescription(s.toString());
+//                updateMinePost();
+//            }
+//
+//            @Override
+//            public void afterTextChanged(Editable s) {
+//
+//            }
+//        });
 
         //Date Button not needed nor the SolvedCheckBox
 //        mDateButton = (Button) v.findViewById(R.id.MinePost_date);
@@ -151,19 +148,19 @@ public class MinePostFragment extends Fragment {
 //        });
 
         //Instead of the Report Button we will make this post in location using GeoParse
-        mReportButton = (Button) v.findViewById(R.id.create_post_button);
-        mReportButton.setOnClickListener(new View.OnClickListener() {
-            public void onClick(View v) {
-                Intent i = new Intent(Intent.ACTION_SEND);
-                i.setType("text/plain");
-                i.putExtra(Intent.EXTRA_TEXT, postMinePost());
-//                i.putExtra(Intent.EXTRA_SUBJECT,
-//                        getString(R.string.MinePost_report_subject));
-                i = Intent.createChooser(i, getString(R.string.send_report));
-
-                startActivity(i);
-            }
-        });
+//        mReportButton = (Button) v.findViewById(R.id.create_post_button);
+//        mReportButton.setOnClickListener(new View.OnClickListener() {
+//            public void onClick(View v) {
+//                Intent i = new Intent(Intent.ACTION_SEND);
+//                i.setType("text/plain");
+//                i.putExtra(Intent.EXTRA_TEXT, postMinePost());
+////                i.putExtra(Intent.EXTRA_SUBJECT,
+////                        getString(R.string.MinePost_report_subject));
+//                i = Intent.createChooser(i, getString(R.string.send_report));
+//
+//                startActivity(i);
+//            }
+//        });
         //Suspect Button not needed
 //        final Intent pickContact = new Intent(Intent.ACTION_PICK,
 //                ContactsContract.Contacts.CONTENT_URI);
@@ -185,24 +182,24 @@ public class MinePostFragment extends Fragment {
         //Needed to take photo
         PackageManager packageManager = getActivity().getPackageManager();
 
-        mPhotoButton = (ImageButton) v.findViewById(R.id.minepost_camera);
+//        mPhotoButton = (ImageButton) v.findViewById(R.id.minepost_camera);
         final Intent captureImage = new Intent(MediaStore.ACTION_IMAGE_CAPTURE);
 
-        boolean canTakePhoto = mPhotoFile != null &&
-                captureImage.resolveActivity(packageManager) != null;
-        mPhotoButton.setEnabled(canTakePhoto);
+//        boolean canTakePhoto = mPhotoFile != null &&
+//                captureImage.resolveActivity(packageManager) != null;
+//        mPhotoButton.setEnabled(canTakePhoto);
 
-        if (canTakePhoto) {
-            Uri uri = Uri.fromFile(mPhotoFile);
-            captureImage.putExtra(MediaStore.EXTRA_OUTPUT, uri);
-        }
-
-        mPhotoButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                startActivityForResult(captureImage, REQUEST_PHOTO);
-            }
-        });
+//        if (canTakePhoto) {
+//            Uri uri = Uri.fromFile(mPhotoFile);
+//            captureImage.putExtra(MediaStore.EXTRA_OUTPUT, uri);
+//        }
+//
+//        mPhotoButton.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//                startActivityForResult(captureImage, REQUEST_PHOTO);
+//            }
+//        });
 
         mPhotoView = (ImageView) v.findViewById(R.id.post_minepost_photo);
         updatePhotoView();
@@ -263,32 +260,32 @@ public class MinePostFragment extends Fragment {
         mCallbacks.onMinePostUpdated(mMinePost);
     }
 
-//Not needed since we will be using Parse's Created at
+    //Not needed since we will be using Parse's Created at
 //    private void updateDate() {
 //        mDateButton.setText(mMinePost.getDate().toString());
 //    }
-        //useful but not necessary
+    //useful but not necessary
     //
-    private String postMinePost() {
-//        String solvedString = null;
-//        if (mMinePost.isSolved()) {
-//            solvedString = getString(R.string.MinePost_report_solved);
-//        } else {
-//            solvedString = getString(R.string.MinePost_report_unsolved);
-//        }
-        String dateFormat = "EEE, MMM dd";
-        String dateString = DateFormat.format(dateFormat, mMinePost.getDate()).toString();
-//        String suspect = mMinePost.getSuspect();
-//        if (suspect == null) {
-//            suspect = getString(R.string.MinePost_report_no_suspect);
-//        } else {
-//            suspect = getString(R.string.MinePost_report_suspect, suspect);
-//        }
-//        String description = getString(mMinePost.getDescription());
-        String report = getString(R.string.minepost_report,
-                mMinePost.getTitle(), dateString,mMinePost.getDescription());
-        return report;
-    }
+//    private String postMinePost() {
+////        String solvedString = null;
+////        if (mMinePost.isSolved()) {
+////            solvedString = getString(R.string.MinePost_report_solved);
+////        } else {
+////            solvedString = getString(R.string.MinePost_report_unsolved);
+////        }
+//        String dateFormat = "EEE, MMM dd";
+//        String dateString = DateFormat.format(dateFormat, mMinePost.getDate()).toString();
+////        String suspect = mMinePost.getSuspect();
+////        if (suspect == null) {
+////            suspect = getString(R.string.MinePost_report_no_suspect);
+////        } else {
+////            suspect = getString(R.string.MinePost_report_suspect, suspect);
+////        }
+////        String description = getString(mMinePost.getDescription());
+//        String report = getString(R.string.minepost_report,
+//                mMinePost.getTitle(), dateString,mMinePost.getDescription());
+//        return report;
+//    }
 
     private void updatePhotoView() {
         if (mPhotoFile == null || !mPhotoFile.exists()) {

@@ -113,7 +113,7 @@ public class MinePostListFragment extends Fragment {
                 return super.onOptionsItemSelected(item);
         }
     }
-
+//not needed anymore but might be useful to have
     private void updateSubtitle() {
         MinePostLab minePostLab = MinePostLab.get(getActivity());
         String subtitle = getString(R.string.subtitle_format, minePostLab.getMinePosts().size());

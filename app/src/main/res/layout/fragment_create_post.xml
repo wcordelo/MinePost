@@ -9,16 +9,17 @@
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="@string/post_details_label"
+        android:text="@string/post_description_label"
         style="?android:listSeparatorTextViewStyle"
-        android:layout_weight="1"/>
+        android:layout_weight="0.25"
+        />
 
     <EditText
+        android:id="@+id/post_details"
+        android:hint="@string/post_message_hint"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginRight="16dp"
-        android:id="@+id/post_details"
-        android:hint="@string/post_message_hint"
         android:layout_weight="1"/>
 
 

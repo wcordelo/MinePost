@@ -105,6 +105,7 @@ public class MinePostLab {
         values.put(MinePostTable.Cols.UUID, minePost.getId().toString());
         values.put(MinePostTable.Cols.TITLE, minePost.getTitle());
         values.put(MinePostTable.Cols.DATE, minePost.getDate().getTime());
+        values.put(MinePostTable.Cols.DESCRIPTION, minePost.getDescription());
 //        values.put(CrimeTable.Cols.SOLVED, minePost.isSolved() ? 1 : 0);
 //        values.put(CrimeTable.Cols.SUSPECT, minePost.getSuspect());
 

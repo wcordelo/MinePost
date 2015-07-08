@@ -17,12 +17,12 @@
             android:layout_height="wrap_content"
             android:text="@string/post_title_label"/>
 
-        <EditText
+        <TextView
             android:id="@+id/MinePost_title"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginRight="16dp"
-            android:hint="@string/post_title_hint"/>
+            />
 
     </LinearLayout>
 
@@ -38,13 +38,12 @@
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="@string/post_details_label"
+        android:text="@string/post_description_label"
         style="?android:listSeparatorTextViewStyle"/>
 
     <TextView
-        android:id="@+id/question_text_view"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:padding="24dp"/>
+        android:id="@+id/description_text_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
 
 </LinearLayout>

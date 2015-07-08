@@ -21,10 +21,12 @@ public class CrimeCursorWrapper extends CursorWrapper {
         long date = getLong(getColumnIndex(MinePostTable.Cols.DATE));
 //        int isSolved = getInt(getColumnIndex(MinePostTable.Cols.SOLVED));
 //        String suspect = getString(getColumnIndex(MinePostTable.Cols.SUSPECT));
+        String description = getString(getColumnIndex(MinePostTable.Cols.DESCRIPTION));
 
         MinePost minePost = new MinePost(UUID.fromString(uuidString));
         minePost.setTitle(title);
         minePost.setDate(new Date(date));
+        minePost.setDescription(description);
 //        minePost.setSolved(isSolved != 0);
 //        minePost.setSuspect(suspect);
 

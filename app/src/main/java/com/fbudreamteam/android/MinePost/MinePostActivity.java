@@ -64,6 +64,7 @@ public class MinePostActivity extends AppCompatActivity
                 MinePost minePost = mMinePosts.get(position);
                 if (minePost.getTitle() != null) {
                     setTitle(minePost.getTitle());
+
                 }
             }
 

@@ -28,6 +28,7 @@
     <string name="add_question_button">Add Question</string>
     <string name="title_add_question">Add Question</string>
     <string name="post_details_label">Details</string>
+    <string name="post_description_label">Description</string>
     <string name="create_post_text">Post!</string>
     <string name="post_message_hint">Enter a message to post.</string>
     <string name="post_title_label">Title:</string>
@@ -46,7 +47,7 @@
     <string name="minepost_suspect_text">Choose Suspect</string>
     <string name="minepost_report_text">Send MinePost Report</string>
     <string name="minepost_report">%1$s!
-        The MinePost was discovered on %2$s. %3$s, and %4$s
+        The MinePost was discovered on %2$s. Description: %3$s
     </string>
     <string name="minepost_report_solved">The case is solved</string>
     <string name="minepost_report_unsolved">The case is not solved</string>

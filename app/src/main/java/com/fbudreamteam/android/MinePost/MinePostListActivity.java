@@ -7,7 +7,7 @@ import android.support.v4.app.Fragment;
  * Created by wcordelo on 7/7/15.
  */
 public class MinePostListActivity extends SingleFragmentActivity
-        implements MinePostFragment.Callbacks , MinePostListFragment.Callbacks
+        implements MinePostViewFragment.Callbacks , MinePostListFragment.Callbacks
 {
 
 
@@ -27,7 +27,7 @@ public class MinePostListActivity extends SingleFragmentActivity
             Intent intent = MinePostActivity.newIntent(this, minePost.getId());
             startActivity(intent);
         } else {
-            Fragment newDetail = MinePostFragment.newInstance(minePost.getId());
+            Fragment newDetail = MinePostViewFragment.newInstance(minePost.getId());
 
             getSupportFragmentManager().beginTransaction()
                     .replace(R.id.detail_fragment_container, newDetail)
