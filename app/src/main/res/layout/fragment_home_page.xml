@@ -12,12 +12,12 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context=".MainActivity">
 
-    <Button
-        android:id="@+id/post_button"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="@string/post"
-        android:textAppearance="?android:attr/textAppearanceSmallInverse"/>
+    <!--<Button-->
+        <!--android:id="@+id/post_button"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:text="@string/post"-->
+        <!--android:textAppearance="?android:attr/textAppearanceSmallInverse"/>-->
 
     <fragment
         android:id="@+id/map_fragment"
@@ -27,10 +27,17 @@
         android:layout_weight="1"
         android:layout_marginTop="16dp"/>
 
-    <ListView
-        android:id="@+id/posts_listview"
+    <android.support.v7.widget.RecyclerView
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/minepost_recycler_view"
         android:layout_width="fill_parent"
         android:layout_height="fill_parent"
         android:layout_weight="1"/>
+
+    <!--<ListView-->
+        <!--android:id="@+id/posts_listview"-->
+        <!--android:layout_width="fill_parent"-->
+        <!--android:layout_height="fill_parent"-->
+        <!--android:layout_weight="1"/>-->
 
 </LinearLayout>

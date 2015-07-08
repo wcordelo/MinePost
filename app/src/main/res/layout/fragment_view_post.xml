@@ -18,7 +18,7 @@
             android:text="@string/post_title_label"/>
 
         <EditText
-            android:id="@+id/crime_title"
+            android:id="@+id/MinePost_title"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginRight="16dp"
@@ -29,7 +29,7 @@
     <ImageView
         android:layout_width="240dp"
         android:layout_height="240dp"
-        android:id="@+id/view_crime_photo"
+        android:id="@+id/view_MinePost_photo"
         android:scaleType="centerInside"
         android:background="@android:color/darker_gray"
         android:cropToPadding="true"
