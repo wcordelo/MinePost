@@ -52,10 +52,10 @@ public class MinePostLab {
 
         CrimeCursorWrapper cursor = queryMinePosts(null, null);
 
-        cursor.moveToFirst();
-        while (!cursor.isAfterLast()) {
+        cursor.moveToLast();
+        while (!cursor.isBeforeFirst()) {
             minePosts.add(cursor.getMinePost());
-            cursor.moveToNext();
+            cursor.moveToPrevious();
         }
         cursor.close();
 

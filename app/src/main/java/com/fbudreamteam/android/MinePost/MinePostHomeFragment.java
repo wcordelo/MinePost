@@ -19,12 +19,12 @@ import java.util.List;
 /**
  * Created by FBU Dream Team / William on 7/7/15.
  */
-public class MinePostListFragment extends Fragment {
+public class MinePostHomeFragment extends Fragment {
     private static final String SAVED_SUBTITLE_VISIBLE = "subtitle";
 
     private RecyclerView mMinePostRecyclerView;
     private MinePostAdapter mAdapter;
-    private boolean mSubtitleVisible;
+//    private boolean mSubtitleVisible;
     private Callbacks mCallbacks; // Code not needed as we do not have selection of post but it might be useful to have
 
     /**
@@ -55,9 +55,10 @@ public class MinePostListFragment extends Fragment {
         mMinePostRecyclerView = (RecyclerView) view.findViewById(R.id.minepost_recycler_view);
         mMinePostRecyclerView.setLayoutManager(new LinearLayoutManager(getActivity()));
 
-        if (savedInstanceState != null) {
-            mSubtitleVisible = savedInstanceState.getBoolean(SAVED_SUBTITLE_VISIBLE);
-        }
+        // INSERT GOOGLE MAP THING INTO ONCREATE ---- WILLL ---- HERE ----- (y)
+//        if (savedInstanceState != null) {
+//            mSubtitleVisible = savedInstanceState.getBoolean(SAVED_SUBTITLE_VISIBLE);
+//        }
 
         updateUI();
 
@@ -70,11 +71,11 @@ public class MinePostListFragment extends Fragment {
         updateUI();
     }
 
-    @Override
-    public void onSaveInstanceState(Bundle outState) {
-        super.onSaveInstanceState(outState);
-        outState.putBoolean(SAVED_SUBTITLE_VISIBLE, mSubtitleVisible);
-    }
+//    @Override
+//    public void onSaveInstanceState(Bundle outState) {
+//        super.onSaveInstanceState(outState);
+////        outState.putBoolean(SAVED_SUBTITLE_VISIBLE, mSubtitleVisible);
+//    }
 
     @Override
     public void onDetach() {
@@ -82,6 +83,7 @@ public class MinePostListFragment extends Fragment {
         mCallbacks = null;
     }
 
+    // inflate the action create post button
     @Override
     public void onCreateOptionsMenu(Menu menu, MenuInflater inflater) {
         super.onCreateOptionsMenu(menu, inflater);
@@ -114,17 +116,17 @@ public class MinePostListFragment extends Fragment {
         }
     }
 //not needed anymore but might be useful to have
-    private void updateSubtitle() {
-        MinePostLab minePostLab = MinePostLab.get(getActivity());
-        String subtitle = getString(R.string.subtitle_format, minePostLab.getMinePosts().size());
-
-        if (!mSubtitleVisible) {
-            subtitle = null;
-        }
-
-        AppCompatActivity activity = (AppCompatActivity) getActivity();
-        activity.getSupportActionBar().setSubtitle(subtitle);
-    }
+//    private void updateSubtitle() {
+//        MinePostLab minePostLab = MinePostLab.get(getActivity());
+//        String subtitle = getString(R.string.subtitle_format, minePostLab.getMinePosts().size());
+//
+//        if (!mSubtitleVisible) {
+//            subtitle = null;
+//        }
+//
+//        AppCompatActivity activity = (AppCompatActivity) getActivity();
+//        activity.getSupportActionBar().setSubtitle(subtitle);
+//    }
 
     public void updateUI() {
         MinePostLab minePostLab = MinePostLab.get(getActivity());
@@ -138,7 +140,7 @@ public class MinePostListFragment extends Fragment {
             mAdapter.notifyDataSetChanged();
         }
 
-        updateSubtitle();
+//        updateSubtitle();
     }
 
     private class MinePostHolder extends RecyclerView.ViewHolder

@@ -6,14 +6,14 @@ import android.support.v4.app.Fragment;
 /**
  * Created by wcordelo on 7/7/15.
  */
-public class MinePostListActivity extends SingleFragmentActivity
-        implements MinePostViewFragment.Callbacks , MinePostListFragment.Callbacks
+public class MinePostHomeActivity extends SingleFragmentActivity
+        implements MinePostViewFragment.Callbacks , MinePostHomeFragment.Callbacks
 {
 
 
     @Override
     protected Fragment createFragment() {
-        return new MinePostListFragment();
+        return new MinePostHomeFragment();
     }
 
     @Override
@@ -21,6 +21,7 @@ public class MinePostListActivity extends SingleFragmentActivity
         return R.layout.activity_masterdetail;
     }
 
+    // handles when user clicks on post in list
     @Override
     public void onMinePostSelected(MinePost minePost) {
         if (findViewById(R.id.detail_fragment_container) == null) {
@@ -35,9 +36,10 @@ public class MinePostListActivity extends SingleFragmentActivity
         }
     }
 
+    // when user edits, updates user interface
     @Override
     public void onMinePostUpdated(MinePost minePost) {
-        MinePostListFragment listFragment = (MinePostListFragment)
+        MinePostHomeFragment listFragment = (MinePostHomeFragment)
                 getSupportFragmentManager()
                         .findFragmentById(R.id.fragment_container);
         listFragment.updateUI();
