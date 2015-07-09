@@ -1,1 +1,1 @@
-include ':ParseStarterProject', ':ParseLoginUI', ':facebook'
+include ':app', ':ParseLoginUI'
