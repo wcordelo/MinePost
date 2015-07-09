@@ -25,7 +25,7 @@ public class MinePostApplication extends Application {
         // Add your initialization code here
         Parse.initialize(this, "aBsY5STXm1XVwrQBMLyE5qh8iSSQuOhagHffyE1b", "uNVlKv0ZuC7fyEjMuKg7eUtQvEAEY2b9uQZ9yGbt");
 
-        //ParseFacebookUtils.initialize(this);
+        ParseFacebookUtils.initialize(this);
 
         ParseACL defaultACL = new ParseACL();
         // Optionally enable public read access.

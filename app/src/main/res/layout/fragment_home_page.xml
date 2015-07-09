@@ -19,12 +19,13 @@
     <!--android:text="@string/post"-->
     <!--android:textAppearance="?android:attr/textAppearanceSmallInverse"/>-->
     <Button
+        android:layout_gravity="right"
+        android:id="@+id/logout"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:minHeight="0dp"
         android:minWidth="0dp"
-        android:text="log out"
-        android:textsize="10dp"/>
+        android:text="log out"/>
 
     <fragment
         android:id="@+id/map_fragment"

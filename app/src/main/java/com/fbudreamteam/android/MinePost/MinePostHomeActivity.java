@@ -10,7 +10,6 @@ public class MinePostHomeActivity extends SingleFragmentActivity
         implements MinePostViewFragment.Callbacks , MinePostHomeFragment.Callbacks
 {
 
-
     @Override
     protected Fragment createFragment() {
         return new MinePostHomeFragment();

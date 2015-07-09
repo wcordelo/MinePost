@@ -20,28 +20,18 @@ android {
 }
 
 dependencies {
-    // Parse
-    compile 'com.parse.bolts:bolts-android:1.2.0'
-    compile fileTree(dir: 'libs', include: 'Parse-*.jar')
-
-    // Crash Reporting
-    compile fileTree(dir: 'libs', include: 'ParseCrashReporting-*.jar')
-
-    // ParseUI
-    compile project(':ParseLoginUI')
-
-    // Facebook
-    compile fileTree(dir: 'libs', include: 'ParseFacebookUtilsV4-*.jar')
-    compile 'com.facebook.android:facebook-android-sdk:4.0.1'
-
     compile 'com.android.support:appcompat-v7:22.2.0'
-    //load dependency from jitpack
-    compile 'com.github.yongjhih:parse:1.9.2'
-    compile 'com.github.yongjhih:parse-crash-reporting:1.9.2'
-    compile 'com.github.yongjhih:parse-facebook-v3:1.9.2'
-    compile 'com.facebook.android:facebook-android-sdk:3.20.0'
-    compile 'com.parse.bolts:bolts-android:1.1.4'
     compile 'com.android.support:support-v4:22.2.0'
     compile 'com.android.support:recyclerview-v7:22.2.0'
+
     compile 'com.google.android.gms:play-services:7.5.0'
+
+    //load dependency from jitpack
+    compile 'com.parse.bolts:bolts-android:1.2.0'
+    compile 'com.github.yongjhih:parse:1.9.2'
+    compile 'com.github.yongjhih:parse-crash-reporting:1.9.2'
+    compile 'com.github.yongjhih:parse-facebook-v4:1.9.2'
+    compile 'com.facebook.android:facebook-android-sdk:4.0.1'
+
+    compile project(':ParseLoginUI')
 }

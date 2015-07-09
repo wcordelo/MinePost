@@ -1,6 +1,7 @@
 package com.fbudreamteam.android.MinePost;
 
 import android.app.Activity;
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v7.app.AppCompatActivity;
@@ -12,7 +13,10 @@ import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 import android.widget.TextView;
+
+import com.parse.ParseUser;
 
 import java.util.List;
 
@@ -26,6 +30,7 @@ public class MinePostHomeFragment extends Fragment {
     private MinePostAdapter mAdapter;
 //    private boolean mSubtitleVisible;
     private Callbacks mCallbacks; // Code not needed as we do not have selection of post but it might be useful to have
+    private Button mLogout;
 
     /**
      * Required interface for hosting activities.
@@ -59,6 +64,19 @@ public class MinePostHomeFragment extends Fragment {
 //        if (savedInstanceState != null) {
 //            mSubtitleVisible = savedInstanceState.getBoolean(SAVED_SUBTITLE_VISIBLE);
 //        }
+
+        mLogout = (Button) view.findViewById(R.id.logout);
+        mLogout.setOnClickListener(new View.OnClickListener() {
+
+            @Override
+            public void onClick(View view) {
+                ParseUser.logOut();
+                Intent myIntent = new Intent(getActivity(), MinePostDispatchActivity.class);
+                getActivity().startActivity(myIntent);
+                //finish();
+            }
+        });
+
 
         updateUI();
 

@@ -56,22 +56,6 @@ public class MinePost {
         mDescription = description;
     }
 
-//    public boolean isSolved() {
-//        return mSolved;
-//    }
-//
-//    public void setSolved(boolean solved) {
-//        mSolved = solved;
-//    }
-
-//    public String getSuspect() {
-//        return mSuspect;
-//    }
-//
-//    public void setSuspect(String suspect) {
-//        mSuspect = suspect;
-//    }
-
     public String getPhotoFilename() {
         return "IMG_" + getId().toString() + ".jpg";
     }
