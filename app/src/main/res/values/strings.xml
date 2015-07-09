@@ -59,4 +59,13 @@
     <string name="search">Find an image near you!</string>
 
 
+    <string name="parse_app_id">aBsY5STXm1XVwrQBMLyE5qh8iSSQuOhagHffyE1b</string>
+    <string name="parse_client_key">uNVlKv0ZuC7fyEjMuKg7eUtQvEAEY2b9uQZ9yGbt</string>
+    <string name="facebook_app_id">304600696330515</string>
+
+    <string-array name="my_facebook_permissions">
+        <item>public_profile</item>
+        <item>user_friends</item>
+    </string-array>
+
 </resources>
