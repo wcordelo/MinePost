@@ -16,9 +16,8 @@ import java.util.UUID;
  * Created by FBU Dream Team / William on 7/7/15.
  */
 public class MinePostActivity extends AppCompatActivity
-//        implements MinePostFragment.Callbacks,
-        implements MinePostViewFragment.Callbacks
-        {
+        implements MinePostFragment.Callbacks,
+        MinePostHomeFragment.Callbacks {
     private static final String EXTRA_CRIME_ID =
             "com.fbudreamteam.android.minepost.minepost_id";
 
@@ -48,7 +47,7 @@ public class MinePostActivity extends AppCompatActivity
             @Override
             public Fragment getItem(int position) {
                 MinePost minePost = mMinePosts.get(position);
-                return MinePostViewFragment.newInstance(minePost.getId());
+                return MinePostFragment.newInstance(minePost.getId());
             }
 
             @Override
@@ -59,7 +58,8 @@ public class MinePostActivity extends AppCompatActivity
 
         mViewPager.setOnPageChangeListener(new ViewPager.OnPageChangeListener() {
             @Override
-            public void onPageScrolled(int position, float positionOffset, int positionOffsetPixels) { }
+            public void onPageScrolled(int position, float positionOffset, int positionOffsetPixels) {
+            }
 
             @Override
             public void onPageSelected(int position) {
@@ -71,7 +71,8 @@ public class MinePostActivity extends AppCompatActivity
             }
 
             @Override
-            public void onPageScrollStateChanged(int state) { }
+            public void onPageScrollStateChanged(int state) {
+            }
         });
 
         for (int i = 0; i < mMinePosts.size(); i++) {
@@ -82,13 +83,19 @@ public class MinePostActivity extends AppCompatActivity
         }
 
     }
-//    @Override
-//    public void onMinePostUpdated(MinePost minePost) {
-//
-//    }
+
+    @Override
+    public void onMinePostUpdated(MinePost minePost) {
+
+    }
 
     @Override
     public void onMinePostViewSelected(MinePost minePost) {
+
+    }
+
+    @Override
+    public void onMinePostSelected(MinePost minePost) {
 
     }
 }

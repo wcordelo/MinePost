@@ -30,6 +30,6 @@ public class CrimeBaseHelper extends SQLiteOpenHelper {
     }
 
     @Override
-    public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion) {
+    public void onUpgrade(SQLiteDebjekeivhcdttltijrnddnigvdjubdfiatabase db, int oldVersion, int newVersion) {
     }
 }

@@ -7,8 +7,9 @@ import android.support.v4.app.Fragment;
  * Created by wcordelo on 7/7/15.
  */
 public class MinePostHomeActivity extends SingleFragmentActivity
-        implements MinePostFragment.Callbacks , MinePostHomeFragment.Callbacks
-        , MinePostViewFragment.Callbacks
+        implements MinePostFragment.Callbacks
+        , MinePostHomeFragment.Callbacks
+//        , MinePostViewFragment.Callbacks
 {
 
 

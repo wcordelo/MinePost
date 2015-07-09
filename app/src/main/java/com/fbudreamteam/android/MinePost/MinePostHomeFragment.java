@@ -23,13 +23,15 @@ public class MinePostHomeFragment extends Fragment {
 
     private RecyclerView mMinePostRecyclerView;
     private MinePostAdapter mAdapter;
-//    private boolean mSubtitleVisible;
+    //    private boolean mSubtitleVisible;
     private Callbacks mCallbacks; // Code not needed as we do not have selection of post but it might be useful to have
 
     /**
      * Required interface for hosting activities.
      */
     public interface Callbacks {
+        void onMinePostViewSelected(MinePost minePost);
+
         void onMinePostSelected(MinePost minePost);
     }
 
@@ -145,8 +147,7 @@ public class MinePostHomeFragment extends Fragment {
     }
 
     private class MinePostHolder extends RecyclerView.ViewHolder
-            implements View.OnClickListener
-    {
+            implements View.OnClickListener {
 
         private TextView mTitleTextView;
         private TextView mDateTextView;
@@ -157,7 +158,10 @@ public class MinePostHomeFragment extends Fragment {
         public MinePostHolder(View itemView) {
             super(itemView);
             itemView.setOnClickListener(this);
-
+//            @Override
+//            public void onClick(View v) {
+//                startActivityForResult(captureImage, REQUEST_PHOTO);
+//            }
             mTitleTextView = (TextView) itemView.findViewById(R.id.list_item_minepost_title_text_view);
             mDateTextView = (TextView) itemView.findViewById(R.id.list_item_minepost_date_text_view);
 
@@ -172,9 +176,10 @@ public class MinePostHomeFragment extends Fragment {
         }
 
         @Override
-        public void onClick(View v) {
+        public void onClick(View view) {
             mCallbacks.onMinePostSelected(mMinePost);
         }
+
     }
 
     private class MinePostAdapter extends RecyclerView.Adapter<MinePostHolder> {

@@ -3,7 +3,6 @@ package com.fbudreamteam.android.MinePost;
 import android.app.Activity;
 import android.graphics.Bitmap;
 import android.os.Bundle;
-import android.os.Environment;
 import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -18,13 +17,14 @@ import java.util.UUID;
  * Created by FBU Dream Team / William on 7/8/15.
  */
 public class MinePostViewFragment extends Fragment {
+//        implements MinePostFragment.Callbacks{
 
     private static final String ARG_MinePost_ID = "MinePost_id";
 //    private static final String DIALOG_DATE = "DialogDate";
 
     //        private static final int REQUEST_DATE = 0;
 //    private static final int REQUEST_CONTACT = 1;
-    private static final int REQUEST_PHOTO = 2;
+//    private static final int REQUEST_PHOTO = 2;
 
     //    private MinePost mMinePost;
     //Similar to Criminal Intent
@@ -38,7 +38,7 @@ public class MinePostViewFragment extends Fragment {
     private TextView mTitleField; // EditText for the Title Field in the Create New Post
     private ImageView mPhotoView; // Yes, also useful.
     private TextView mDescription;
-    private Callbacks mCallbacks; // Required to keep the fragments independent
+    private MinePostHomeFragment.Callbacks mCallbacks; // Required to keep the fragments independent
 
     //        private Button mDateButton; // Might not use date if Created At is implemented
 //    private CheckBox mSolvedCheckbox; // Not needed at all. Will implement up /down voting
@@ -49,9 +49,9 @@ public class MinePostViewFragment extends Fragment {
     /**
      * Required interface for hosting activities.
      */
-    public interface Callbacks {
-        void onMinePostViewSelected(MinePost minePost);
-    }
+//    public interface Callbacks {
+//        void onMinePostViewSelected(MinePost minePost);
+//    }
 
     public static MinePostViewFragment newInstance(UUID MinePostId) {
         Bundle args = new Bundle();
@@ -65,7 +65,7 @@ public class MinePostViewFragment extends Fragment {
     @Override
     public void onAttach(Activity activity) {
         super.onAttach(activity);
-        mCallbacks = (Callbacks) activity;
+        mCallbacks = (MinePostHomeFragment.Callbacks) activity;
     }
 
     @Override
@@ -103,13 +103,7 @@ public class MinePostViewFragment extends Fragment {
 //        mPhotoView = (ImageView) v.findViewById(R.id.post_minepost_photo);
 //        mPhotoView.setImage(Uri.parse(mMinePost.getPhotoFilename()));
         mPhotoView = (ImageView) v.findViewById(R.id.view_MinePost_photo);
-        if (mPhotoFile == null || !mPhotoFile.exists()) {
-            mPhotoView.setImageDrawable(null);
-        } else {
-            Bitmap bitmap = PictureUtils.getScaledBitmap(
-                    mPhotoFile.getPath(), getActivity());
-            mPhotoView.setImageBitmap(bitmap);
-        }
+        updatePhotoView();
 //        mTitleField.addTextChangedListener(new TextWatcher() {
 //            @Override
 //            public void beforeTextChanged(CharSequence s, int start, int count, int after) {
@@ -302,24 +296,24 @@ public class MinePostViewFragment extends Fragment {
             mPhotoView.setImageBitmap(bitmap);
         }
     }
-
+//Might be useful  but useful as of right now
     /* Checks if external storage is available for read and write */
-    public boolean isExternalStorageWritable() {
-        String state = Environment.getExternalStorageState();
-        if (Environment.MEDIA_MOUNTED.equals(state)) {
-            return true;
-        }
-        return false;
-    }
-
-    /* Checks if external storage is available to at least read */
-    public boolean isExternalStorageReadable() {
-        String state = Environment.getExternalStorageState();
-        if (Environment.MEDIA_MOUNTED.equals(state) ||
-                Environment.MEDIA_MOUNTED_READ_ONLY.equals(state)) {
-            return true;
-        }
-        return false;
-    }
+//    public boolean isExternalStorageWritable() {
+//        String state = Environment.getExternalStorageState();
+//        if (Environment.MEDIA_MOUNTED.equals(state)) {
+//            return true;
+//        }
+//        return false;
+//    }
+//
+//    /* Checks if external storage is available to at least read */
+//    public boolean isExternalStorageReadable() {
+//        String state = Environment.getExternalStorageState();
+//        if (Environment.MEDIA_MOUNTED.equals(state) ||
+//                Environment.MEDIA_MOUNTED_READ_ONLY.equals(state)) {
+//            return true;
+//        }
+//        return false;
+//    }
 
 }
