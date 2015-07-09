@@ -55,29 +55,29 @@ public class MinePostActivity extends AppCompatActivity
             }
         });
 
-//        mViewPager.setOnPageChangeListener(new ViewPager.OnPageChangeListener() {
-//            @Override
-//            public void onPageScrolled(int position, float positionOffset, int positionOffsetPixels) { }
-//
-//            @Override
-//            public void onPageSelected(int position) {
-//                MinePost minePost = mMinePosts.get(position);
-//                if (minePost.getTitle() != null) {
-//                    setTitle(minePost.getTitle());
-//
-//                }
-//            }
-//
-//            @Override
-//            public void onPageScrollStateChanged(int state) { }
-//        });
-//
-//        for (int i = 0; i < mMinePosts.size(); i++) {
-//            if (mMinePosts.get(i).getId().equals(crimeId)) {
-//                mViewPager.setCurrentItem(i);
-//                break;
-//            }
-//        }
+        mViewPager.setOnPageChangeListener(new ViewPager.OnPageChangeListener() {
+            @Override
+            public void onPageScrolled(int position, float positionOffset, int positionOffsetPixels) { }
+
+            @Override
+            public void onPageSelected(int position) {
+                MinePost minePost = mMinePosts.get(position);
+                if (minePost.getTitle() != null) {
+                    setTitle(minePost.getTitle());
+
+                }
+            }
+
+            @Override
+            public void onPageScrollStateChanged(int state) { }
+        });
+
+        for (int i = 0; i < mMinePosts.size(); i++) {
+            if (mMinePosts.get(i).getId().equals(crimeId)) {
+                mViewPager.setCurrentItem(i);
+                break;
+            }
+        }
     }
     @Override
     public void onMinePostUpdated(MinePost minePost) {
