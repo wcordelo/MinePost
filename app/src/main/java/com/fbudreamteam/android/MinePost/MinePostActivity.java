@@ -16,7 +16,9 @@ import java.util.UUID;
  * Created by FBU Dream Team / William on 7/7/15.
  */
 public class MinePostActivity extends AppCompatActivity
-        implements MinePostFragment.Callbacks{
+//        implements MinePostFragment.Callbacks,
+        implements MinePostViewFragment.Callbacks
+        {
     private static final String EXTRA_CRIME_ID =
             "com.fbudreamteam.android.minepost.minepost_id";
 
@@ -46,7 +48,7 @@ public class MinePostActivity extends AppCompatActivity
             @Override
             public Fragment getItem(int position) {
                 MinePost minePost = mMinePosts.get(position);
-                return MinePostFragment.newInstance(minePost.getId());
+                return MinePostViewFragment.newInstance(minePost.getId());
             }
 
             @Override
@@ -55,32 +57,38 @@ public class MinePostActivity extends AppCompatActivity
             }
         });
 
-//        mViewPager.setOnPageChangeListener(new ViewPager.OnPageChangeListener() {
-//            @Override
-//            public void onPageScrolled(int position, float positionOffset, int positionOffsetPixels) { }
-//
-//            @Override
-//            public void onPageSelected(int position) {
-//                MinePost minePost = mMinePosts.get(position);
-//                if (minePost.getTitle() != null) {
-//                    setTitle(minePost.getTitle());
-//
-//                }
-//            }
-//
-//            @Override
-//            public void onPageScrollStateChanged(int state) { }
-//        });
-//
-//        for (int i = 0; i < mMinePosts.size(); i++) {
-//            if (mMinePosts.get(i).getId().equals(crimeId)) {
-//                mViewPager.setCurrentItem(i);
-//                break;
-//            }
-//        }
+        mViewPager.setOnPageChangeListener(new ViewPager.OnPageChangeListener() {
+            @Override
+            public void onPageScrolled(int position, float positionOffset, int positionOffsetPixels) { }
+
+            @Override
+            public void onPageSelected(int position) {
+                MinePost minePost = mMinePosts.get(position);
+                if (minePost.getTitle() != null) {
+                    setTitle(minePost.getTitle());
+
+                }
+            }
+
+            @Override
+            public void onPageScrollStateChanged(int state) { }
+        });
+
+        for (int i = 0; i < mMinePosts.size(); i++) {
+            if (mMinePosts.get(i).getId().equals(crimeId)) {
+                mViewPager.setCurrentItem(i);
+                break;
+            }
+        }
+
     }
+//    @Override
+//    public void onMinePostUpdated(MinePost minePost) {
+//
+//    }
+
     @Override
-    public void onMinePostUpdated(MinePost minePost) {
+    public void onMinePostViewSelected(MinePost minePost) {
 
     }
 }

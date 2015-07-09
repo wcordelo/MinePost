@@ -3,7 +3,6 @@ package com.fbudreamteam.android.MinePost;
 import android.app.Activity;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
-import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
@@ -38,6 +37,8 @@ public class MinePostHomeFragment extends Fragment {
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setHasOptionsMenu(true);
+
+
     }
 
     @Override
@@ -159,6 +160,7 @@ public class MinePostHomeFragment extends Fragment {
 
             mTitleTextView = (TextView) itemView.findViewById(R.id.list_item_minepost_title_text_view);
             mDateTextView = (TextView) itemView.findViewById(R.id.list_item_minepost_date_text_view);
+
 //            mSolvedCheckBox = (CheckBox) itemView.findViewById(R.id.list_item_crime_solved_check_box);
         }
 

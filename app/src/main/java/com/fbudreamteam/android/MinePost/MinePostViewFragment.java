@@ -1,11 +1,9 @@
 package com.fbudreamteam.android.MinePost;
 
 import android.app.Activity;
-import android.content.Intent;
-import android.content.pm.PackageManager;
 import android.graphics.Bitmap;
 import android.os.Bundle;
-import android.provider.MediaStore;
+import android.os.Environment;
 import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -38,20 +36,21 @@ public class MinePostViewFragment extends Fragment {
 
     private File mPhotoFile; // Will use Parse ImageView later on... once Database is implemented
     private TextView mTitleField; // EditText for the Title Field in the Create New Post
+    private ImageView mPhotoView; // Yes, also useful.
+    private TextView mDescription;
+    private Callbacks mCallbacks; // Required to keep the fragments independent
+
     //        private Button mDateButton; // Might not use date if Created At is implemented
 //    private CheckBox mSolvedCheckbox; // Not needed at all. Will implement up /down voting
 //    private Button mReportButton; // Instead of a Report Button we need a Post Button in the location
     //    private Button mSuspectButton; // This uses the contacts list which is something we don't need...
-//    private ImageButton mPhotoButton; // Yes, very useful.
-    private ImageView mPhotoView; // Yes, also useful.
-    private TextView mDescription;
-    private Callbacks mCallbacks; // Required to keep the fragments independent
+//    private mPhotoButton; // Yes, very useful.
 
     /**
      * Required interface for hosting activities.
      */
     public interface Callbacks {
-        void onMinePostUpdated(MinePost minePost);
+        void onMinePostViewSelected(MinePost minePost);
     }
 
     public static MinePostViewFragment newInstance(UUID MinePostId) {
@@ -101,6 +100,16 @@ public class MinePostViewFragment extends Fragment {
         mTitleField.setText(mMinePost.getTitle());
         mDescription = (TextView) v.findViewById(R.id.description_text_view);
         mDescription.setText(mMinePost.getDescription());
+//        mPhotoView = (ImageView) v.findViewById(R.id.post_minepost_photo);
+//        mPhotoView.setImage(Uri.parse(mMinePost.getPhotoFilename()));
+        mPhotoView = (ImageView) v.findViewById(R.id.view_MinePost_photo);
+        if (mPhotoFile == null || !mPhotoFile.exists()) {
+            mPhotoView.setImageDrawable(null);
+        } else {
+            Bitmap bitmap = PictureUtils.getScaledBitmap(
+                    mPhotoFile.getPath(), getActivity());
+            mPhotoView.setImageBitmap(bitmap);
+        }
 //        mTitleField.addTextChangedListener(new TextWatcher() {
 //            @Override
 //            public void beforeTextChanged(CharSequence s, int start, int count, int after) {
@@ -180,10 +189,10 @@ public class MinePostViewFragment extends Fragment {
 //            mSuspectButton.setEnabled(false);
 //        }
         //Needed to take photo
-        PackageManager packageManager = getActivity().getPackageManager();
+//        PackageManager packageManager = getActivity().getPackageManager();
 
 //        mPhotoButton = (ImageButton) v.findViewById(R.id.minepost_camera);
-        final Intent captureImage = new Intent(MediaStore.ACTION_IMAGE_CAPTURE);
+//        final Intent captureImage = new Intent(MediaStore.ACTION_IMAGE_CAPTURE);
 
 //        boolean canTakePhoto = mPhotoFile != null &&
 //                captureImage.resolveActivity(packageManager) != null;
@@ -201,17 +210,14 @@ public class MinePostViewFragment extends Fragment {
 //            }
 //        });
 
-        mPhotoView = (ImageView) v.findViewById(R.id.post_minepost_photo);
-        updatePhotoView();
-
         return v;
     }
 
-    @Override
-    public void onActivityResult(int requestCode, int resultCode, Intent data) {
-        if (resultCode != Activity.RESULT_OK) {
-            return;
-        }
+//    @Override
+//    public void onActivityResult(int requestCode, int resultCode, Intent data) {
+//        if (resultCode != Activity.RESULT_OK) {
+//            return;
+//        }
         //Code not needed for MinePost
 //        if (requestCode == REQUEST_DATE) {
 //            Date date = (Date) data
@@ -249,16 +255,16 @@ public class MinePostViewFragment extends Fragment {
 //            } finally {
 //                c.close();
 //            } } else if (requestCode == REQUEST_PHOTO) {
-        if (requestCode == REQUEST_PHOTO) {
-            updateMinePost();
-            updatePhotoView();
-        }
-    }
-
-    private void updateMinePost() {
-        MinePostLab.get(getActivity()).updateMinePost(mMinePost);
-        mCallbacks.onMinePostUpdated(mMinePost);
-    }
+//        if (requestCode == REQUEST_PHOTO) {
+//            updateMinePost();
+//            updatePhotoView();
+//        }
+//    }
+//Not needed
+//    private void updateMinePost() {
+//        MinePostLab.get(getActivity()).updateMinePost(mMinePost);
+//        mCallbacks.onMinePostViewSelected(mMinePost);
+//    }
 
     //Not needed since we will be using Parse's Created at
 //    private void updateDate() {
@@ -286,7 +292,7 @@ public class MinePostViewFragment extends Fragment {
 //                mMinePost.getTitle(), dateString,mMinePost.getDescription());
 //        return report;
 //    }
-
+//Not needed
     private void updatePhotoView() {
         if (mPhotoFile == null || !mPhotoFile.exists()) {
             mPhotoView.setImageDrawable(null);
@@ -295,6 +301,25 @@ public class MinePostViewFragment extends Fragment {
                     mPhotoFile.getPath(), getActivity());
             mPhotoView.setImageBitmap(bitmap);
         }
+    }
+
+    /* Checks if external storage is available for read and write */
+    public boolean isExternalStorageWritable() {
+        String state = Environment.getExternalStorageState();
+        if (Environment.MEDIA_MOUNTED.equals(state)) {
+            return true;
+        }
+        return false;
+    }
+
+    /* Checks if external storage is available to at least read */
+    public boolean isExternalStorageReadable() {
+        String state = Environment.getExternalStorageState();
+        if (Environment.MEDIA_MOUNTED.equals(state) ||
+                Environment.MEDIA_MOUNTED_READ_ONLY.equals(state)) {
+            return true;
+        }
+        return false;
     }
 
 }
