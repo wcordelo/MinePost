@@ -9,7 +9,7 @@ import com.parse.ParseFacebookUtils;
 import com.parse.ParseObject;
 import com.parse.ParseUser;
 
-public class ParseApplication extends Application {
+public class MinePostApplication extends Application {
 
     @Override
     public void onCreate() {
