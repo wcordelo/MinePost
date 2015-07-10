@@ -3,6 +3,10 @@ package com.parse.starter;
 import android.app.Activity;
 import android.app.ProgressDialog;
 import android.content.Intent;
+<<<<<<< Updated upstream
+=======
+import android.graphics.Bitmap;
+>>>>>>> Stashed changes
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -14,8 +18,13 @@ import com.parse.ParseAnalytics;
 import com.parse.ParseException;
 import com.parse.ParseObject;
 import com.parse.SaveCallback;
+<<<<<<< Updated upstream
 import com.parse.starter.database.MinePostAddedCallback;
 import com.parse.starter.database.MinePostManager;
+=======
+
+import java.nio.ByteBuffer;
+>>>>>>> Stashed changes
 
 /**
  * Created by karinnaloo on 7/9/15.
