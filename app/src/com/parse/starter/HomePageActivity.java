@@ -35,11 +35,6 @@ public class HomePageActivity extends Activity {
         mRecyclerView.setLayoutManager(mLayoutManager); //Layout Manager
 //        mAdapter = new MyAdapter(myDataset); //RecyclerView Adapter
 //        mRecyclerView.setAdapter(mAdapter); //RecyclerView Adapter
-<<<<<<< HEAD
-=======
-
-        logOut = (Button) findViewById(R.id.logout);
->>>>>>> afaf281935f4ef29dec3b63e9fd6ce791c8b70d6
 
         logOut = (Button) findViewById(R.id.logout);
         //log out button

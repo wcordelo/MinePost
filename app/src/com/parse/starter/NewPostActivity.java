@@ -62,6 +62,7 @@ public class NewPostActivity extends Activity {
                 String postDescription = description.getText().toString();
                 parseData.put("title", postTitle); // save the title
                 parseData.put("description", postDescription); // save the description
+                parseData.put("votes", 0);
                 parseData.saveInBackground(new SaveCallback() {
                     @Override
                     public void done(ParseException e) {
