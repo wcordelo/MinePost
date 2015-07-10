@@ -23,15 +23,11 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.CheckBox;
 import android.widget.EditText;
-<<<<<<< HEAD
 import android.widget.Toast;
 import android.widget.ImageButton;
 import android.widget.ImageView;
-=======
 import android.widget.ImageButton;
 import android.widget.ImageView;
-
->>>>>>> e82a3ed367edfb68c3abe42c7f30ff26b4032a9e
 import com.parse.ParseAnalytics;
 import com.parse.ParseException;
 import com.parse.ParseFile;
@@ -81,15 +77,13 @@ public class NewPostActivity extends Activity implements MinePostAddedCallback {
         setContentView(R.layout.fragment_create_post);
 
         ParseAnalytics.trackAppOpenedInBackground(getIntent());
-<<<<<<< HEAD
 
         // enter the mTitle
         mTitle = (EditText) findViewById(R.id.MinePost_title);
 
         // enter the mDescription
         mDescription = (EditText) findViewById(R.id.post_description);
-=======
->>>>>>> e82a3ed367edfb68c3abe42c7f30ff26b4032a9e
+
         // enter the title
         title = (EditText) findViewById(R.id.MinePost_title);
 
@@ -99,14 +93,7 @@ public class NewPostActivity extends Activity implements MinePostAddedCallback {
         // post button
         mPostButton = (Button) findViewById(R.id.create_post_button);
         mPostButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-<<<<<<< HEAD
-                mMinePostManager.addMinePost(mTitle.getText().toString(),
-                        mDescription.getText().toString(),
-                        NewPostActivity.this);
-                mProgressDialog = ProgressDialog.show(NewPostActivity.this, "", getString(R.string.mineposts_saving_text), true);
-            }
+
             @Override
             public void onClick(View v) {
                 String postTitle = mTitle.getText().toString();
@@ -116,16 +103,13 @@ public class NewPostActivity extends Activity implements MinePostAddedCallback {
                 newTextInput.put("mDescription", postDescription); // save the mDescription
                 newTextInput.saveInBackground(new SaveCallback() {
 
-=======
->>>>>>> e82a3ed367edfb68c3abe42c7f30ff26b4032a9e
                 String postTitle = title.getText().toString();
                 String postDescription = description.getText().toString();
                 parseData.put("title", postTitle); // save the title
                 parseData.put("description", postDescription); // save the description
-<<<<<<< HEAD
-=======
+
                 parseData.put("votes", 0);
->>>>>>> e82a3ed367edfb68c3abe42c7f30ff26b4032a9e
+
                 parseData.saveInBackground(new SaveCallback() {
                     @Override
                     public void done(ParseException e) {
@@ -168,42 +152,5 @@ public class NewPostActivity extends Activity implements MinePostAddedCallback {
         bp.copyPixelsToBuffer(buffer); //Move the byte data to the buffer
         return buffer.array(); //Get the underlying array containing the data.
     }
-<<<<<<< HEAD
 
-    ///////////////////////////////////////////////////////////////////////////////////////////////
-    private CheckBox mQuestionTrueCheckbox;
-    private EditText mQuestionText;
-    private Button mSaveQuestionButton;
-    private QuizQuestionManager mQuizQuestionManager;
-    private ProgressDialog mProgressDialog;
-
-    @Override
-    public void onCreate(Bundle savedInstanceState) {
-//        super.onCreate(savedInstanceState);
-//        setContentView(R.layout.activity_add_question);
-//        mQuestionTrueCheckbox = (CheckBox) findViewById(R.id.question_true);
-//        mQuestionText = (EditText) findViewById(R.id.question_text);
-        mSaveQuestionButton = (Button) findViewById(R.id.save_question);
-//        mQuizQuestionManager = new QuizQuestionManager();
-        mSaveQuestionButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                mQuizQuestionManager.addQuestion(mQuestionText.getText().toString(),
-                        mQuestionTrueCheckbox.isChecked(),
-                        AddQuestionActivity.this);
-                mProgressDialog = ProgressDialog.show(AddQuestionActivity.this, "", getString(R.string.questions_saving_text), true);
-            }
-        });
-    }
-
-    @Override
-    public void onQuizAdded() {
-        Toast.makeText(this, R.string.quiz_added, Toast.LENGTH_SHORT).show();
-        setResult(RESULT_OK);
-        finish();
-    }
-    ///////////////////////////////////////////////////////////////////////////////////////////////
-
-=======
->>>>>>> e82a3ed367edfb68c3abe42c7f30ff26b4032a9e
 }
