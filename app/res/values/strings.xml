@@ -14,10 +14,6 @@
     </string-array>
 
 
-
-
-
-
     <string name="post">MinePost</string>
     <string name="minepost_title_hint">Enter a title for the MinePost.</string>
     <string name="minepost_title_label">Title</string>
@@ -41,4 +37,6 @@
     <string name="send_report">Send MinePost via</string>
 
     <string name="search">Find an image near you!</string>
+
+    <string name="minepost_loading_text">Loading Questions...</string>
 </resources>
