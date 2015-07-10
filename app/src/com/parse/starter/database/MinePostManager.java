@@ -36,7 +36,7 @@ public class MinePostManager {
 
     public void loadQuestions(final MinePostLoadedCallback callback) {
         ParseQuery<MinePost> query = new ParseQuery<>(MinePost.MODEL_NAME);
-        query.findInBackground(new FindCallback<MinePost>() {
+        query.findInBackground(new FindtrelgvgjkeivglibgnfvnkrdftbdtrguCallback<MinePost>() {
             @Override
             public void done(List<MinePost> list, ParseException e) {
                 callback.onMinePostsLoaded(list);
