@@ -1,45 +1,25 @@
 package com.parse.starter;
 
 import android.app.Activity;
-import android.app.ProgressDialog;
 import android.content.Intent;
-<<<<<<< HEAD
-import android.graphics.Bitmap;
-import android.os.Bundle;
 import android.content.pm.PackageManager;
 import android.graphics.Bitmap;
 import android.net.Uri;
 import android.os.Bundle;
-=======
-import android.content.pm.PackageManager;
-import android.graphics.Bitmap;
-import android.net.Uri;
-import android.os.Bundle;
->>>>>>> e82a3ed367edfb68c3abe42c7f30ff26b4032a9e
 import android.os.Environment;
 import android.provider.MediaStore;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
-import android.widget.CheckBox;
 import android.widget.EditText;
-import android.widget.Toast;
 import android.widget.ImageButton;
 import android.widget.ImageView;
-import android.widget.ImageButton;
-import android.widget.ImageView;
+
 import com.parse.ParseAnalytics;
 import com.parse.ParseException;
 import com.parse.ParseFile;
 import com.parse.ParseObject;
 import com.parse.SaveCallback;
-import com.parse.starter.database.MinePostAddedCallback;
-import com.parse.starter.database.MinePostManager;
-import java.nio.ByteBuffer;
-import java.io.File;
-import java.nio.ByteBuffer;
-import java.text.SimpleDateFormat;
-import java.util.Date;
 
 import java.io.File;
 import java.nio.ByteBuffer;
@@ -49,21 +29,11 @@ import java.util.Date;
 /**
  * Created by karinnaloo on 7/9/15.
  */
-public class NewPostActivity extends Activity implements MinePostAddedCallback {
-
+public class NewPostActivity extends Activity {
     String parseObjName = "MinePostTest";
-    private EditText mTitle;
-    private EditText mDescription;
-    private Button mPostButton;
-    private MinePostManager mMinePostManager;
-    private ProgressDialog mProgressDialog;
-
-    ImageButton photoButton;
-    ImageView photoView;
-
-    final ParseObject parseData = new ParseObject(parseObjName);
-
-    private static final int REQUEST_PHOTO = 2;
+    EditText title;
+    EditText description;
+    Button postButton;
 
     ImageButton photoButton;
     ImageView photoView;
@@ -77,39 +47,22 @@ public class NewPostActivity extends Activity implements MinePostAddedCallback {
         setContentView(R.layout.fragment_create_post);
 
         ParseAnalytics.trackAppOpenedInBackground(getIntent());
-
-        // enter the mTitle
-        mTitle = (EditText) findViewById(R.id.MinePost_title);
-
-        // enter the mDescription
-        mDescription = (EditText) findViewById(R.id.post_description);
-
         // enter the title
         title = (EditText) findViewById(R.id.MinePost_title);
 
-        //MinePostManager
-        mMinePostManager = new MinePostManager();
+        // enter the description
+        description = (EditText) findViewById(R.id.post_description);
 
         // post button
-        mPostButton = (Button) findViewById(R.id.create_post_button);
-        mPostButton.setOnClickListener(new View.OnClickListener() {
-
+        postButton = (Button) findViewById(R.id.create_post_button);
+        postButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                String postTitle = mTitle.getText().toString();
-                String postDescription = mDescription.getText().toString();
-                ParseObject newTextInput = new ParseObject(parseObjName);
-                newTextInput.put("mTitle", postTitle); // save the mTitle
-                newTextInput.put("mDescription", postDescription); // save the mDescription
-                newTextInput.saveInBackground(new SaveCallback() {
-
                 String postTitle = title.getText().toString();
                 String postDescription = description.getText().toString();
                 parseData.put("title", postTitle); // save the title
                 parseData.put("description", postDescription); // save the description
-
                 parseData.put("votes", 0);
-
                 parseData.saveInBackground(new SaveCallback() {
                     @Override
                     public void done(ParseException e) {
@@ -152,5 +105,4 @@ public class NewPostActivity extends Activity implements MinePostAddedCallback {
         bp.copyPixelsToBuffer(buffer); //Move the byte data to the buffer
         return buffer.array(); //Get the underlying array containing the data.
     }
-
 }
