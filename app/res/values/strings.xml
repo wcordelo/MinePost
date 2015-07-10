@@ -12,4 +12,33 @@
         <item>public_profile</item>
         <item>user_friends</item>
     </string-array>
+
+
+
+
+
+
+    <string name="post">MinePost</string>
+    <string name="minepost_title_hint">Enter a title for the MinePost.</string>
+    <string name="minepost_title_label">Title</string>
+    <string name="minepost_details_label">Details</string>
+    <string name="minepost_solved_label">Solved</string>
+    <string name="date_picker_title">Date of MinePost:</string>
+    <string name="new_minepost">New MinePost</string>
+    <string name="show_subtitle">Show Subtitle</string>
+    <string name="hide_subtitle">Hide Subtitle</string>
+    <string name="subtitle_format">%1$s MinePost</string>
+    <string name="minepost_suspect_text">Choose Suspect</string>
+    <string name="minepost_report_text">Send MinePost Report</string>
+    <string name="minepost_report">%1$s!
+        The MinePost was discovered on %2$s. Description: %3$s
+    </string>
+    <string name="minepost_report_solved">The case is solved</string>
+    <string name="minepost_report_unsolved">The case is not solved</string>
+    <string name="minepost_report_no_suspect">there is no suspect.</string>
+    <string name="minepost_report_suspect">the suspect is %s.</string>
+    <string name="minepost_report_subject">MinePost Subject Report</string>
+    <string name="send_report">Send MinePost via</string>
+
+    <string name="search">Find an image near you!</string>
 </resources>
