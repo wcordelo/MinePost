@@ -23,7 +23,6 @@ public class HomePageActivity extends Activity {
         ParseAnalytics.trackAppOpenedInBackground(getIntent());
 
         logOut = (Button) findViewById(R.id.logout);
-
         //log out button
         logOut.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -38,9 +37,7 @@ public class HomePageActivity extends Activity {
             }
         });
 
-
         create = (Button) findViewById(R.id.create_button); // create button
-
         // Initialize create button
         create.setOnClickListener(new View.OnClickListener() {
             @Override
