@@ -2,7 +2,8 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
               android:layout_width="match_parent"
               android:layout_height="match_parent"
-              android:orientation="vertical">
+              android:orientation="vertical"
+    android:background="#ff999999">
 
     <LinearLayout
         android:layout_width="wrap_content"
@@ -18,7 +19,7 @@
             android:text="Title: "/>
 
         <TextView
-            android:id="@+id/MinePost_title"
+            android:id="@+id/MinePost_view_title"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginRight="16dp"
@@ -26,14 +27,53 @@
 
     </LinearLayout>
 
-    <ImageView
-        android:layout_width="240dp"
-        android:layout_height="240dp"
-        android:id="@+id/view_MinePost_photo"
-        android:scaleType="centerInside"
-        android:background="@android:color/darker_gray"
-        android:cropToPadding="true"
-        android:layout_gravity="center_horizontal"/>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+
+        <ImageView
+            android:layout_centerHorizontal="true"
+            android:layout_width="240dp"
+            android:layout_height="240dp"
+            android:id="@+id/MinePost_view_photo"
+            android:scaleType="centerInside"
+            android:background="@android:color/darker_gray"
+            android:cropToPadding="true"
+            android:layout_gravity="center_horizontal"/>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/MinePost_view_photo"
+            android:layout_toEndOf="@+id/MinePost_view_photo"
+            android:layout_centerVertical="true"
+            android:orientation="vertical">
+
+            <ImageButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/up_vote_button"
+                android:src="@drawable/up_vote_arrow"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/votes_counter"
+                android:text="Votes"
+                android:layout_gravity="center_horizontal"/>
+
+            <ImageButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/down_vote_button"
+                android:src="@drawable/down_vote_arrow"/>
+
+        </LinearLayout>
+
+
+    </RelativeLayout>
+
 
     <TextView
         android:layout_width="match_parent"
