@@ -59,21 +59,15 @@
             <ImageButton
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:id="@+id/up_vote_button"
-                android:src="@drawable/up_vote_arrow"/>
+                android:id="@+id/like_button"
+                android:src="@drawable/like_button_image"/>
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:id="@+id/votes_counter"
-                android:text="Votes"
+                android:text="Likes"
                 android:layout_gravity="center_horizontal"/>
-
-            <ImageButton
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:id="@+id/down_vote_button"
-                android:src="@drawable/down_vote_arrow"/>
 
         </LinearLayout>
 
